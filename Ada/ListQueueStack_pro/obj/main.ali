@@ -1,0 +1,114 @@
+V "GNAT Lib v2012"
+M P W=b
+A -gnatA
+P SS ZX
+R nnvvnnnnnnvnnnnvnnnnnvnnnvvnnnnvnnnnnnnnnnnnvnnnnnnnnnnnnnvnnvnvnnnnnnvnnnnnnnnnnnnnn
+
+U main%b		main.adb		827ef794 NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
+W linkedlisthandler%s	linkedlisthandler.adb	linkedlisthandler.ali
+Z system%s		system.ads		system.ali
+Z system.address_image%s  s-addima.adb		s-addima.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.img_bool%s	s-imgboo.adb		s-imgboo.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
+
+D ada.ads		20120510125802 3ffc8e18
+D a-except.ads		20120510125752 ec1b44c1
+D a-finali.ads		20120510125752 52ecdc1b
+D a-inteio.ads		20120510125752 f64b89a4
+D a-ioexce.ads		20120510125752 8b9de6cd
+D a-numeri.ads		20120510125754 bb51c45a
+D a-nudira.ads		20120510125754 2fef2912
+D a-nudira.adb		20120510125754 e57ce22b
+D a-stream.ads		20120510125756 2ca4ee37
+D a-tags.ads		20120510125758 6c0509d0
+D a-textio.ads		20120510125800 386df5d4
+D a-tiinio.ads		20120510125800 aa04e5d6
+D a-unccon.ads		20120510125800 f9eb8f06
+D a-uncdea.ads		20120510125800 f15a5ed1
+D interfac.ads		20120510125814 129923ea
+D i-cstrea.ads		20120510125814 1bd72c32
+D linkedlisthandler.ads	20130507201802 43e41bb4
+D linkedlisthandler.adb	20130508094854 9d823013
+D main.adb		20130601122528 6d49f4bc
+D system.ads		20120510125846 6daf90c4
+D s-addima.ads		20120510125818 a1ec9d3a
+D s-conca2.ads		20120510125822 fbd0f2fc
+D s-crtl.ads		20120510125824 ac77b159
+D s-exctab.ads		20120510125824 66e51330
+D s-ficobl.ads		20120510125824 443b9d66
+D s-finmas.ads		20120510125824 b95bb341
+D s-finroo.ads		20120510125824 4ff27390
+D s-imgboo.ads		20120510125824 f5d971eb
+D s-imgint.ads		20120510125826 02dbe0c2
+D s-imguns.ads		20120510125826 9ff43cf7
+D s-parame.ads		20120510125832 b6e20cc0
+D s-pooglo.ads		20120510125832 542f33d0
+D s-rannum.ads		20120510125832 5eb33f0a
+D s-rannum.adb		20120510125832 eb980280
+D s-ransee.ads		20120510125832 01a57b33
+D s-secsta.ads		20120510125832 eea35a36
+D s-soflin.ads		20120510125832 24c8153c
+D s-stache.ads		20120510125834 596fc1b4
+D s-stalib.ads		20120510125834 f78bcf95
+D s-stoele.ads		20120510125834 facd7d98
+D s-stoele.adb		20120510125834 afc5dc80
+D s-stopoo.ads		20120510125834 7b8fbeee
+D s-traent.ads		20120510125838 5221ee41
+D s-unstyp.ads		20120510125838 6ae15c76
+D s-valuns.ads		20120510125838 10a8ed3b
+D s-wchcon.ads		20120510125840 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 19|1r6 3r6 4r6 17r10 25r38 47r4 51r4 53r4 57r4 59r4 62r10
+X 6 a-numeri.ads
+16K13*Numerics 32e17 19|3w10 4r10 25r42
+X 7 a-nudira.ads
+42E9 Result_Subtype 19|25r67
+44k22*Discrete_Random 73e33 19|4w19 25r51
+48R9 Generator 19|27r27[25]
+50V13 Random{integer} 19|32s32[25]
+53U14 Reset<33|91p14> 19|30s23[25]
+X 8 a-nudira.adb
+51V16 Random[33|74]{integer} 34|390b13[19|25]
+X 11 a-textio.ads
+49K13*Text_IO 471e16 19|1w10 17r14 47r8 51r8 53r8 57r8 59r8 62r14
+263U14*Put_Line 19|17s22 47s16 51s16 53s16 57s16 59s16 62s22
+X 15 interfac.ads
+61M9*Unsigned_32
+64M9*Unsigned_64
+X 17 linkedlisthandler.ads
+7k9*LinkedListHandler 44e22 19|2w6 11r27
+17R9 List 19|12r20[11]
+24U14 AddLast 19|55s15[11]
+37V13 IsThere{boolean} 19|62s40[11]
+X 19 main.adb
+6U11*Main 6b11 67l5 67t9
+11K12 IntList[17|7] 12r12 55r7 62r32
+12r4 List0{17|17R9[11]} 55m23 55r23 62r48
+14V13 Printer{boolean} 14b13 14>21 20t7
+14i21 Integer0{integer} 16r10 17r38
+23A9 ArrayOfInteger(integer)<integer> 24r51 40r22
+24U14 ShuffleArrayOfInteger 24b14 24=37 37l8 37t29 52s4 58s4
+24a37 List{23A9} 31r24 33r15 34m10 34r21 35m10
+25K15 Discrete_Random[7|44] 27r11 30r7 32r16
+26i7 K{integer} 32m10 34r26 35r15
+27r7 G{7|48R9[25]} 30r29 32r39
+28i7 T{integer} 33m10 35r21
+31i11 I{integer} 32r46 33r20 34r15
+40a4 ArrayOfInteger0{23A9} 48r13 49m7 52m26 52r26 54r13 55r29 58m26 58r26
+. 60r13 62r54
+48i8 i{integer} 49r23 49r29
+54i8 i{integer} 55r45
+60i8 i{integer} 61r10 62r70
+X 33 s-rannum.ads
+66V13*Random{15|61M9} 34|219i21
+67V13*Random{15|64M9} 34|219i21
+

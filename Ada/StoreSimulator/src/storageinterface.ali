@@ -1,0 +1,41 @@
+V "GNAT Lib v2012"
+P ZX
+R nnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnn
+
+U storageinterface%s	storageinterface.ads	cf0b1534 NE OO PK GE
+
+D storageinterface.ads	20130512163203 cf0b1534
+D system.ads		20120510125846 75f1d483
+X 1 storageinterface.ads
+2+9 ElementType 6r51 8r53 10r57 15r82 16r81 16r101
+3k9*StorageInterface 2z9 23l5 23e21
+4h9*Object 6p13 6r31 7p13 7r31 8p14 8r34 10p14 10r38 11p14 11r41 12p14 12r42
+. 13p14 13r43 15p14 15r32 16p14 16r31 18r34
+6y13*IsThere{boolean} 6>21 6>39
+6r21 Self{4R9}
+6*39 Needle{2+9}
+7y13*IsEmpty{boolean} 7>21
+7r21 Self{4R9}
+8x14*AddLast 8<23 8>42
+8r23 Self{4R9}
+8*42 Value{2+9}
+10x14*Remove 10=21 10>46
+10r21 Object0{4R9}
+10*46 Value{2+9}
+11x14*RemoveAll 11=24
+11r24 Object0{4R9}
+12x14*RemoveLast 12=25
+12r25 Object0{4R9}
+13x14*RemoveFirst 13=26
+13r26 Object0{4R9}
+15x14*Walk 15>20 15^40
+15r20 Object0{4R9}
+15p40 Callback(boolean)
+15*68 Integer0{2+9}
+16x14*Map 16>19 16^39
+16r19 Object0{4R9}
+16p39 Callback(2+9)
+16*67 Integer0{2+9}
+18H9*Instance<4R9> 6p13 7p13 8p14 10p14 11p14 12p14 13p14 15p14 16p14 20e14
+19i7 Length{integer}
+

@@ -1,0 +1,111 @@
+V "GNAT Lib v2009"
+M P W=b
+A -g
+A -gnatf
+A -gnato
+A -gnat05
+A -g
+A -gnatA
+P SS ZX
+R nnnnnnvnnnnnvnnnnnnnvnvnnnnnnnnnnnnnvnnnnvnnnnnnnnnnnnnvnvvnnvnnnnnnnnnnnnnnn
+
+U main%b		main.adb		d87a975a NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W binarytree%s		binarytree.adb		binarytree.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.img_bool%s	s-imgboo.adb		s-imgboo.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W toolbox%s		toolbox.adb		toolbox.ali
+
+D ada.ads		20090519112356 9c7dd3ea
+D a-calend.ads		20090519112250 19486c30
+D a-caldel.ads		20090519112250 c565f6eb
+D a-except.ads		20090519112306 b54b55de
+D a-finali.ads		20090519112310 bfd2ca79
+D a-filico.ads		20090519112308 4ff02a40
+D a-inteio.ads		20090519112310 03bc737c
+D a-ioexce.ads		20090519112312 be0900a0
+D a-stream.ads		20090519112324 34aca5be
+D a-tags.ads		20090519112336 bfa07446
+D a-textio.ads		20090519112338 fe8af46e
+D a-tiinio.ads		20090519112342 949a7272
+D a-unccon.ads		20090519112342 51e09df2
+D binarytree.ads	20130503132746 fb660972
+D interfac.ads		20090519112500 a69cad5c
+D i-cstrea.ads		20090519112454 e1e064a9
+D main.adb		20130503134634 78173a6b
+D system.ads		20090519112726 0e6ea6c5
+D s-conca2.ads		20090519112534 3d28f3da
+D s-crtl.ads		20090519112536 89a96a96
+D s-exctab.ads		20090519112538 4b7fd51d
+D s-ficobl.ads		20090519112540 8bb681e5
+D s-finimp.ads		20090519112542 90fd9896
+D s-finroo.ads		20090519112542 1408f9d1
+D s-imgboo.ads		20090519112546 a8111aea
+D s-imgint.ads		20090519112548 f77d133c
+D s-parame.ads		20090519112622 f32e56e9
+D s-secsta.ads		20090519112626 d2c357fb
+D s-soflin.ads		20090519112628 61e5c9e8
+D s-stache.ads		20090519112630 481f9e9d
+D s-stalib.ads		20090519112630 9cbc334a
+D s-stoele.ads		20090519112630 a4d57c26
+D s-stoele.adb		20090519112630 49ef69d7
+D s-stratt.ads		20090519112632 fef7c1da
+D s-traent.ads		20090519112650 a66ef260
+D s-unstyp.ads		20090519112650 c0f9fae5
+D s-wchcon.ads		20090519112700 30c48dc1
+D toolbox.ads		20130427154550 a63d2351
+D unchdeal.ads		20090519112734 66b7fd29
+X 1 ada.ads
+16K9*Ada 19e8 17|3r6 4r6 12r7 20r10 21r10 22r10 23r10 24r10 25r10 26r10 27r10
+. 28r10 29r10 31r10 34r16 38r16 41r16 44r16 47r16 50r16 52r16 53r16 55r16
+. 56r16 57r16 59r16 60r16 62r16 68r22 70r22 74r16 79r22 83r16 88r10
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[12|48] 17|4w10
+X 11 a-textio.ads
+51K13*Text_IO 509e16 17|3w10 12r11 20r14 21r14 22r14 23r14 24r14 25r14 26r14
+. 27r14 28r14 29r14 31r14 34r20 38r20 41r20 44r20 47r20 50r20 52r20 53r20
+. 55r20 56r20 57r20 59r20 60r20 62r20 68r26 70r26 74r20 79r26 83r20 88r14
+169U14*New_Line 17|31r22 88r22
+226U14*Get_Immediate 17|29r22
+245U14*Put 17|12r19 59r28 62r28 68r34 70r34
+266U14*Put_Line 17|20r22 21r22 22r22 23r22 24r22 25r22 26r22 27r22 28r22
+. 34r28 38r28 41r28 44r28 47r28 50r28 52r28 53r28 55r28 56r28 57r28 60r28
+. 74r28 79r34 83r28
+X 14 binarytree.ads
+2K9*Binarytree 37e15 17|1w6 8r12 10r31 39r16 42r16 45r16 48r16 51r16 52r56
+. 53r56 55r56 56r56 60r37 66r22 67r22 76r19 78r22 84r16
+6R9*Node 12e14
+7P9*NodePtr(6R9) 17|10r42
+9i7*Value{integer} 17|12r32
+14R9*Tree 17e14 17|8r23
+16i7*Length{integer} 17|57r63
+21U14*Add 17|39r27 76r30
+22V13*Depth{integer} 17|52r67 55r67
+23V13*OptimalDepth{integer} 17|53r67 56r67
+26U14*InOrder 17|45r27
+27U14*PreOrder 17|42r27
+28U14*PostOrder 17|48r27
+31U14*Balance 17|51r27 78r33
+32V13*Exist{boolean} 17|60r48 66r33
+34U14*Delete 17|67r33
+35U14*Empty 17|84r27
+X 17 main.adb
+6U11*Main 6b11 94l5 94t9
+8r4 Tree0{14|14R9} 39m32 42r36 45r35 48r37 51m36 52r73 53r80 55r73 56r80
+. 57r57 60r54 66r39 67m40 76m34 78m41 84m33
+10U14 Print 10b14 10>20 13t7 42r42 45r41 48r43
+10p20 NodePtr0{14|7P9} 12r23
+16U14 Menu 16b14 90l8 90t12 93r4
+17e7 Input{character} 29m37 32r15 38r69 39r58
+64i19 i{integer} 66r45 67r46 68r38
+75i20 i{integer} 76r40 77r22 79r44
+X 38 toolbox.ads
+1K9*ToolBox 17|2w6 38r50 39r39 60r60 64r33 75r28 38|14e12
+7V13*Get{integer} 17|60r68 64r41 75r36
+8V13*ToInteger{integer} 17|38r58 39r47
+

@@ -1,0 +1,137 @@
+V "GNAT Lib v2012"
+P SS ZX
+R nnnnnnnnnnnnnnnvnnnnnnnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnnnnnvnnvnnnnnnnnnnnnnn
+
+U cashregister%b	cashregister.adb	c39d783f NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.concat_6%s	s-conca6.adb		s-conca6.ali
+W system.img_bool%s	s-imgboo.adb		s-imgboo.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+
+U cashregister%s	cashregister.ads	0638c70d EE OO PF PK KM
+Z ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+Z ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
+W linkedlist%s		linkedlist.adb		linkedlist.ali  AD
+W randomnumbers%s	randomnumbers.adb	randomnumbers.ali
+Z storageinterface%s	storageinterface.ads	storageinterface.ali
+W system%s		system.ads		system.ali
+Z system.address_image%s  s-addima.adb		s-addima.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20120510125803 3ffc8e18
+D a-except.ads		20120510125752 ec1b44c1
+D a-finali.ads		20120510125753 52ecdc1b
+D a-inteio.ads		20120510125753 f64b89a4
+D a-ioexce.ads		20120510125753 8b9de6cd
+D a-stream.ads		20120510125756 2ca4ee37
+D a-tags.ads		20120510125759 6c0509d0
+D a-textio.ads		20120510125800 386df5d4
+D a-tiinio.ads		20120510125800 aa04e5d6
+D a-unccon.ads		20120510125801 f9eb8f06
+D a-uncdea.ads		20120510125801 f15a5ed1
+D cashregister.ads	20130513185031 ccd2514e
+D cashregister.adb	20130513185626 3722dca5
+D interfac.ads		20120510125815 129923ea
+D i-cstrea.ads		20120510125814 1bd72c32
+D linkedlist.ads	20130512163600 4e5fad31
+D linkedlist.adb	20130512164251 0d663b79
+D randomnumbers.ads	20130505183103 84b53b72
+D storageinterface.ads	20130512163203 cf0b1534
+D system.ads		20120510125846 75f1d483
+D s-addima.ads		20120510125819 a1ec9d3a
+D s-conca6.ads		20120510125823 c7caf514
+D s-crtl.ads		20120510125824 ac77b159
+D s-exctab.ads		20120510125824 66e51330
+D s-ficobl.ads		20120510125825 443b9d66
+D s-finmas.ads		20120510125825 b95bb341
+D s-finroo.ads		20120510125825 4ff27390
+D s-imgboo.ads		20120510125825 f5d971eb
+D s-imgint.ads		20120510125826 02dbe0c2
+D s-parame.ads		20120510125832 b6e20cc0
+D s-pooglo.ads		20120510125832 542f33d0
+D s-secsta.ads		20120510125833 eea35a36
+D s-soflin.ads		20120510125833 24c8153c
+D s-stache.ads		20120510125834 596fc1b4
+D s-stalib.ads		20120510125834 f78bcf95
+D s-stoele.ads		20120510125834 facd7d98
+D s-stoele.adb		20120510125834 afc5dc80
+D s-stopoo.ads		20120510125834 7b8fbeee
+D s-stratt.ads		20120510125834 aedef97e
+D s-traent.ads		20120510125838 5221ee41
+D s-unstyp.ads		20120510125838 6ae15c76
+D s-wchcon.ads		20120510125840 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 13|1r6 99r7
+X 8 a-textio.ads
+49K13*Text_IO 471e16 13|1w10 99r11
+263U14*Put_Line 13|99s19
+X 12 cashregister.ads
+4K9*CashRegister 35l5 35e17 13|2b14 101l5 101t17
+7i4*ScanDuration{integer} 13|93r31
+8i4*CreditCardPayment{integer}
+9i4*CashPayment{integer}
+12i4*nScannedItems{integer} 13|14m13 14r30
+14R9*customer 18e14 21r51 13|35r32 85r35
+15i7*groceries{natural} 13|12r40 13m40 13r80 36m9 86r55
+16b7*StandingInQueue{boolean} 13|37m9
+17i7*slowspeed{natural} 13|15r43 16m40 16r80 38m9 87r51
+21K12*CustomerListHandler[16|7] 23r16
+22R9*instance 25e14 27r41 28r46 29r49 30r40 31r39 32r31 33r34 34r34 13|8r41
+. 33r46 46r49 55r40 64r39 73r33 82r33 98r36
+23r7*queue{16|18R9[21]} 13|11r24 12r23 13m23 13r63 15r26 16m23 16r63 20r26
+. 35m17 48m17 92r17 99r90
+24b7*active{boolean} 13|21m26 57m17 66m17 75r24 99r53
+27U14*Update 27=22 13|8b14 27l8 27t14
+27r22 instance0{22R9} 13|8b22 11r14 12r13 13m13 13r13 13r53 15r16 16m13 16r13
+. 16r53 18m29 20r16 21m16
+28U14*AddCustomer 28=27 28>56 28>81 13|33b14 40l8 40t19
+28r27 instance0{22R9} 13|33b27 35m7 35r7
+28i56 nGroceries{natural} 13|33b56 36r28
+28i81 slowspeed0{natural} 13|33b81 38r22
+29U14*RemoveCustomer 29=30 13|18s13 46b14 49l8 49t22
+29r30 instance0{22R9} 13|46b30 48m7 48r7
+30U14*Close 30=21 13|55b14 58l8 58t13
+30r21 instance0{22R9} 13|55b21 57m7
+31U14*Open 31=20 13|64b14 67l8 67t12
+31r20 instance0{22R9} 13|64b20 66m7
+32V13*isOpen{boolean} 32>20 13|73b13 76l8 76t14
+32r20 instance0{22R9} 13|73b21 75r14
+33V14*ETA{integer} 33>19 13|82b13 94l8 94t11 99s121
+33r19 instance0{22R9} 13|82b18 92r7
+34U14*print 34>20 13|98b14 100l8 100t13
+34r20 instance0{22R9} 13|98b21 99r43 99r80 99r126
+X 13 cashregister.adb
+83i7 totalGroceries{integer} 86m10 86r28 93r14
+84i7 SumSlowSpeed{integer} 87m10 87r26 93r46
+85V16 count{boolean} 85b16 85>23 89l11 89t16 92r29
+85r23 customer0{12|14R9} 86r45 87r41
+X 16 linkedlist.ads
+7k9*LinkedList 12|1w6 21r39 16|39e15
+10R9*Node
+11P9*NodePtr(10R9[12|21])
+14r7*Value{12|14R9} 13|12r34[12|21] 13m34[12|21] 13r74[12|21] 15r37[12|21]
+. 16m34[12|21] 16r74[12|21]
+18R9*List<19|18R9[9[12|21]]> 12|23r36[21]
+19p7*Head{11P9[12|21]} 13|12r29[12|21] 13r29[12|21] 13r69[12|21] 15r32[12|21]
+. 16r29[12|21] 16r69[12|21]
+25U14*AddLast<19|8p14> 13|35s23[12|21]
+29U14*RemoveFirst<19|13p14> 13|48s23[12|21]
+30U14*Walk<19|15p14> 13|92s23[12|21]
+33V13*IsEmpty{boolean}<19|7p13> 13|11s30[12|21]
+X 18 randomnumbers.ads
+1K9*RandomNumbers 12|2w6 2r25 18|9e18
+X 19 storageinterface.ads
+4h9*Object
+18H9 Instance<4R9[16|9]>
+19i7*Length{integer} 13|20r32[16|9[12|21]] 99r96[16|9[12|21]]
+

@@ -1,0 +1,115 @@
+V "GNAT Lib v2012"
+M P W=b
+A -gnatA
+P ZX
+R nnvnnnnnnvnnnnnnnnnnnnnvnvnnnnnnnnnnnnnvnnnnvnnnnnnnnnnnnnvnnnnvnnnnvnvnnnnnnnnnnnnnn
+
+U main%b		main.adb		fb6c4d9d NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W linkedlisthandler%s	linkedlisthandler.adb	linkedlisthandler.ali
+W system%s		system.ads		system.ali
+W system.address_image%s  s-addima.adb		s-addima.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W toolbox%s		toolbox.adb		toolbox.ali
+
+D ada.ads		20120510125802 3ffc8e18
+D a-calend.ads		20120510125748 d86d6c8c
+D a-caldel.ads		20120510125748 9f20b83d
+D a-except.ads		20120510125752 ec1b44c1
+D a-finali.ads		20120510125752 52ecdc1b
+D a-inteio.ads		20120510125752 f64b89a4
+D a-ioexce.ads		20120510125752 8b9de6cd
+D a-stream.ads		20120510125756 2ca4ee37
+D a-tags.ads		20120510125758 6c0509d0
+D a-textio.ads		20120510125800 386df5d4
+D a-tiinio.ads		20120510125800 aa04e5d6
+D a-unccon.ads		20120510125800 f9eb8f06
+D a-uncdea.ads		20120510125800 f15a5ed1
+D interfac.ads		20120510125814 129923ea
+D i-cstrea.ads		20120510125814 1bd72c32
+D linkedlisthandler.ads	20130419090102 93efd84b
+D main.adb		20130419080232 dd1a9bb1
+D system.ads		20120510125846 6daf90c4
+D s-addima.ads		20120510125818 a1ec9d3a
+D s-conca2.ads		20120510125822 fbd0f2fc
+D s-crtl.ads		20120510125824 ac77b159
+D s-exctab.ads		20120510125824 66e51330
+D s-ficobl.ads		20120510125824 443b9d66
+D s-finmas.ads		20120510125824 b95bb341
+D s-finroo.ads		20120510125824 4ff27390
+D s-parame.ads		20120510125832 b6e20cc0
+D s-pooglo.ads		20120510125832 542f33d0
+D s-soflin.ads		20120510125832 24c8153c
+D s-stache.ads		20120510125834 596fc1b4
+D s-stalib.ads		20120510125834 f78bcf95
+D s-stoele.ads		20120510125834 facd7d98
+D s-stoele.adb		20120510125834 afc5dc80
+D s-stopoo.ads		20120510125834 7b8fbeee
+D s-traent.ads		20120510125838 5221ee41
+D s-unstyp.ads		20120510125838 6ae15c76
+D s-wchcon.ads		20120510125840 bfeb2e3d
+D toolbox.ads		20130418220026 da53ef2d
+X 1 ada.ads
+16K9*Ada 19e8 17|1r6 1r19 27r10 28r10 29r10 30r10 31r10 32r10 33r10 34r10
+. 35r10 38r13 42r13 45r13 49r13 51r13 52r13 55r13 58r13 61r13 64r13 67r13
+. 70r13 71r13 74r13 77r13 80r13 83r13 90r10
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[11|45] 17|1w23
+X 10 a-textio.ads
+49K13*Text_IO 471e16 17|1w10 27r14 28r14 29r14 30r14 31r14 32r14 33r14 34r14
+. 35r14 38r17 42r17 45r17 49r17 51r17 52r17 55r17 58r17 61r17 64r17 67r17
+. 70r17 71r17 74r17 77r17 80r17 83r17 90r14
+166U14*New_Line 17|35s22 52s25 71s25 90s22
+223U14*Get_Immediate 17|34s22
+242U14*Put 17|42s25 45s25 67s25
+263U14*Put_Line 17|27s22 28s22 29s22 30s22 31s22 32s22 33s22 38s25 49s25
+. 51s25 55s25 58s25 61s25 64s25 70s25 74s25 77s25 80s25 83s25
+X 16 linkedlisthandler.ads
+3K9*LinkedListHandler 73e22 17|3w6 8r12 11r14 12r52 12r79 13r53 13r80 43r13
+. 46r13 48r13 53r13 56r13 59r13 62r13 65r13 68r13 72r13 75r13 78r13 81r13
+. 85r16
+16R10*List 19e14 17|8r30 11r32 12r70 13r71
+31U14*Walk 17|53s31 56s31 59s31
+38U14*Reduce 17|78s31 81s31
+44U14*Get 17|43s31
+47p4*AddLast 17|48r31 85r34
+50p4*AddFirst 17|46r31
+58U14*RemoveAll 17|75s31
+59U14*RemoveFirst 17|13r98 65s31
+60U14*RemoveLast 17|12r97 62s31
+61U14*Remove 17|68s31
+68U14*PrintMemory 17|72s31
+X 17 main.adb
+7U11*Main 7b11 98l5 98t9
+8r4 List1{16|16R10} 43m36 43r36 46m40 46r40 48m39 48r39 53r37 56r37 59r37
+. 62m43 62r43 65m44 65r44 68m39 68r39 72r44 75m42 75r42 78m38 78r38 81m38
+. 81r38 85m43 85r43
+10K12 QueueHandler 14e7
+11r7 List{16|16R10}
+12p7 RemoveLast
+12r38 List1{16|16R10}
+13p7 RemoveFirst
+13r39 List1{16|16R10}
+17U14 square 17b14 17=22 20l8 20t14 56r44
+17i22 Value{integer} 19m7 19r16
+23U14 Menu 23b14 92l8 92t12 96s4
+24e7 Input{character} 34m37 34r37 36r15 48r64 49r46
+84i17 i{integer} 85r50
+X 18 system.ads
+37K9*System 17|5r6 18|195e11
+X 19 s-addima.ads
+39V17*Address_Image{string} 17|5w13
+X 37 toolbox.ads
+1K9*ToolBox 17|4w6 46r46 48r46 53r44 59r44 68r46 78r44 81r44 84r22 84r37
+. 37|12e12
+3U14*Get 17|59r52
+4U14*Print 17|53r52
+5V13*Get{integer} 17|46s54 68s54 84s30 84s45
+6V13*ToInteger{integer} 17|48s54
+7V13*Addition{integer} 17|78r52
+8V13*Multiplication{integer} 17|81r52
+

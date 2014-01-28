@@ -1,0 +1,18 @@
+V "GNAT Lib v2012"
+A -g
+A -gnat12
+A -gnat05
+A -g
+A -gnato
+A -gnatf
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
+
+U tcp%s			tcp.ads			919f12a3 NE OO PU PK IU KM
+
+D system.ads		20120510125846 6daf90c4
+D tcp.ads		20130528131634 919f12a3
+X 2 tcp.ads
+1K9*TCP 3l5 3e8
+

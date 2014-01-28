@@ -1,0 +1,17 @@
+project AdaServer is
+
+   for Source_Dirs use ("src");
+   for Object_Dir use "obj";
+   for Exec_Dir use ".";
+   for Main use ("main.adb");
+
+   package Builder is
+      for Default_Switches ("ada") use ("-g");
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnat12", "-gnat05", "-g", "-gnato", "-gnatf");
+   end Compiler;
+
+end AdaServer;
+

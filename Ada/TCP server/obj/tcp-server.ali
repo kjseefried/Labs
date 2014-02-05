@@ -1,0 +1,137 @@
+V "GNAT Lib v2013"
+A -g
+A -gnat05
+A -g
+A -gnato
+A -gnatf
+A -gnatA
+P ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_STREAMS
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK
+
+U tcp.server%b		tcp-server.adb		7b1a28d2 NE OO PK GE IU
+W ada.streams%s		a-stream.ads		a-stream.ali
+W tcp%s			tcp.ads			tcp.ali
+
+U tcp.server%s		tcp-server.ads		984f1a0e BN EE NE OO PK GE IU
+W ada%s			ada.ads			ada.ali
+W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.sockets%s	g-socket.adb		g-socket.ali
+W tcp%s			tcp.ads			tcp.ali
+
+D ada.ads		20130417131023 3ffc8e18
+D a-except.ads		20130417131019 10fcae55
+D a-finali.ads		20130417131020 52ecdc1b
+D a-ioexce.ads		20130417131020 8b9de6cd
+D a-stream.ads		20130417131021 2ca4ee37
+D a-tags.ads		20130417131022 6c0509d0
+D a-textio.ads		20130417131022 386df5d4
+D a-unccon.ads		20130417131022 f9eb8f06
+D a-uncdea.ads		20130417131022 f15a5ed1
+D gnat.ads		20130417131026 fd2ad2f1
+D g-socket.ads		20130417131026 923c234a
+D interfac.ads		20130417131027 cb4a8015
+D i-c.ads		20130417131026 5421119b
+D i-cstrea.ads		20130417131026 8128536b
+D system.ads		20130417131036 f2f2d889
+D s-crtl.ads		20130417131029 dfcfca61
+D s-exctab.ads		20130417131029 66e51330
+D s-ficobl.ads		20130417131029 55a71d43
+D s-finmas.ads		20130417131029 b95bb341
+D s-finroo.ads		20130417131029 4ff27390
+D s-oscons.ads		20130603160047 d2b348ca
+D s-parame.ads		20130417131032 b6e20cc0
+D s-pooglo.ads		20130417131032 542f33d0
+D s-soflin.ads		20130417131032 24c8153c
+D s-stache.ads		20130417131032 596fc1b4
+D s-stalib.ads		20130417131032 f78bcf95
+D s-stoele.ads		20130417131032 facd7d98
+D s-stoele.adb		20130417131032 afc5dc80
+D s-stopoo.ads		20130417131032 7b8fbeee
+D s-traent.ads		20130417131033 5221ee41
+D s-unstyp.ads		20130417131034 6ae15c76
+D s-wchcon.ads		20130417131034 bfeb2e3d
+D tcp.ads		20140205184446 919f12a3
+D tcp-server.ads	20140205185804 04b8d6c9
+D tcp-server.adb	20140205185013 7fa2fe1b
+X 1 ada.ads
+16K9*Ada 19e8 34|1r6 2r6 3r6 6r5 35|6r3
+X 4 a-ioexce.ads
+18K13*IO_Exceptions 30e22 34|2w10
+X 5 a-stream.ads
+36K13*Streams 69e16 34|3w10
+X 7 a-textio.ads
+49K13*Text_IO 471e16 34|1w10 6r9 35|6r7
+166U14*New_Line 35|6s15
+242U14*Put 35|69s4
+249U14*Get_Line 35|70s4
+263U14*Put_Line 35|18s3 30s17 55s4 81s4
+X 10 gnat.ads
+34K9*GNAT 37e9 34|4r6 7r5 11r19 20r19 21r19
+X 11 g-socket.ads
+58K14*Sockets 1262e17 34|4w11 11r24 20r24 21r24 35|7r3 8r3 9r62 12r3 13r34
+. 14r34 17r3 29r14 40r16 41r16 42r16 46r4 54r15 55r15
+412I9*Socket_Type 34|20r32 35|42r24
+439O12*Timeval_Duration{duration}
+441O12*Selector_Duration{439O12}
+444E9*Selector_Status 444e57 35|40r24
+451X4*Socket_Error 35|29r22
+463n25*Family_Inet{463E9} 35|13r42
+479I9*Port_Type<integer> 34|11r32
+505R9*Sock_Addr_Type 508e14 35|41r24
+505e25*Family{463E9} 35|13m24
+506r7*Addr{488R9} 35|14m24
+507i7*Port{479I9} 35|15m24
+521V13*Image{string} 35|55s23
+524V13*Inet_Addr{488R9} 35|14s42
+683n7*Reuse_Address{681E9} 35|9r70
+699e22*Name{681E9} 35|9m51
+708b13*Enabled{boolean} 35|10m51
+805U14*Create_Socket 35|7s11
+821U14*Accept_Socket 35|46s12
+822i7 Server{412I9} 35|47r27
+823i7 Socket{412I9} 35|48r27
+824r7 Address{505R9} 35|49r27
+825o7 Timeout{441O12} 35|50r27
+827e7 Status{444E9} 35|51r27
+835U14*Bind_Socket 35|12s11
+886U14*Listen_Socket 35|17s11
+993U14*Set_Socket_Option 35|8s11
+996r7 Option{699R9} 35|8r40
+1006P9*Stream_Access(5|39R9) 34|21r32
+1009V13*Stream{1006P9} 35|54s23
+X 33 tcp.ads
+1K9*TCP 3e8 34|13r9 23r5 35|1r14 88r5
+X 34 tcp-server.ads
+10s9 IP{string} 35|14r53 18r34
+11i9 PORT{11|479I9} 35|15r34 18r45
+13k13*Server 33|1k9 34|10z9 11z9 23l9 23e15 35|1b18 88l9 88t15
+14U19*Start 35|5b12 31t5
+15T19*listenerTask 35|21r14 39b12 59t5
+16T19*writerTask 35|22r14 64b12 75t5
+17T19*readerTask 35|23r14 79b12 83t5
+20i9 Receiver{11|412I9} 35|7m26 8r30 12r24 17r26 47r38
+21p9 channel{11|1006P9} 35|54m4 56r19 72r20 81r44
+X 35 tcp-server.adb
+21t9 lt{34|15T19}
+22t9 wt{34|16T19}
+23t9 rt{34|17T19}
+40e3 sstatus{11|444E9} 51m38 51r38
+41r3 Client{11|505R9} 49m38 55r30
+42i3 Connection{11|412I9} 48m38 54r31
+65a3 Message{string} 70m14 71r7 72r29 72r38
+66i3 MessageLength{natural} 70m23 72r55
+

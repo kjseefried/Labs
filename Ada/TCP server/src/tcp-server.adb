@@ -18,16 +18,14 @@ package body TCP.Server is
   Put_Line ("Server started: " & IP & ":" & PORT'Img);
 
   declare
-  	lt : listenerTask;
-   	wt : writerTask;
-   	rt : readerTask;
+   lt : listenerTask;
   begin
-  	null;
+   null;
   end;
 
  exception
- 	when Sockets.Socket_Error =>
-  		Put_Line ("Error occurred. Try another port.");
+  when Sockets.Socket_Error =>
+   Put_Line ("Error occurred. Try another port.");
  end;
 
 
@@ -37,9 +35,9 @@ package body TCP.Server is
 
 
  task body listenerTask is
-  sstatus    : Sockets.Selector_Status;
-  Client     : Sockets.Sock_Addr_Type;
-  Connection : Sockets.Socket_Type;
+  status      : Sockets.Selector_Status;
+  Client      : Sockets.Sock_Addr_Type;
+  Connection  : Sockets.Socket_Type;
  begin
   loop
 
@@ -48,12 +46,21 @@ package body TCP.Server is
 			  Socket  => Connection,
 			  Address => Client,
 			  timeout => 30.0,
-			  Status  => sstatus
+			  Status  => status
 			 );
+
 
    channel := Sockets.Stream (Connection);
    Put_Line ( Sockets.Image (Client) & " connected.");
-   String'Output (channel, "Hello client");
+   String'Output ( channel, "Hello client");
+
+
+    declare
+     wt : writerTask;
+     rt : readerTask;
+    begin
+     null;
+    end;
 
   end loop;
  end;
@@ -67,9 +74,12 @@ package body TCP.Server is
  begin
   loop
    Put ("> ");
+   Flush;
    Get_Line (Message, MessageLength);
    if Message'Length > 0  then
-    String'Output (channel, Message (Message'First .. MessageLength));
+
+     String'Output (channel, Message (Message'First .. MessageLength));
+
    end if;
   end loop;
  end;
@@ -78,8 +88,9 @@ package body TCP.Server is
 
  task body readerTask is begin
   loop
-   Put_Line ("incoming> " & String'Input ( channel ));
-  end loop;
+  Flush;
+   Put_Line ("incoming > " & String'Input ( channel ));
+     end loop;
  end;
 
 

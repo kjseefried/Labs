@@ -60,6 +60,7 @@ package body TCP.Client is
  task body readerTask is
  begin
   loop
+  Flush;
    Put_Line ("> " & String'Input (Channel));
   end loop;
  end readerTask;

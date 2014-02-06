@@ -7,6 +7,8 @@ with Ada.Containers.Doubly_Linked_Lists;
 
 use Ada.Text_IO;
 use GNAT;
+use Ada.Containers;
+use type GNAT.Sockets.Stream_Access;
 
 generic
 	IP 	: String;
@@ -20,10 +22,10 @@ package TCP.Server is
 
 private
    	Receiver: Sockets.Socket_Type;
-   	channel	: Sockets.Stream_Access;
 
-	--type chType is array( Positive range <>) of Sockets.Stream_Access;
-	--channels : chType(1..10);
+ package channelList is new Doubly_Linked_Lists(Sockets.Stream_Access);
+   use channelList;
+   channels : channelList.List;
 
 
 end TCP.Server;

@@ -1,9 +1,9 @@
 with TCP.Client;
 
 procedure Client is
-	Package mainClient is new TCP.Client ("127.0.0.1", 1100);
+	Package Test_Client is new TCP.Client ("127.0.0.1", 1100);
 
 begin
-	mainClient.Connect;
+	Test_Client.Connect;
 
 end Client;

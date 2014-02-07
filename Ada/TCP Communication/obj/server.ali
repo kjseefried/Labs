@@ -36,7 +36,7 @@ RV NO_IMPLICIT_ALIASING
 RV SPARK
 RV MAX_TASKS=1+
 
-U server%b		server.adb		e05a70c5 NE OO SU IL
+U server%b		server.adb		97d4101c NE OO SU IL
 Z ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.containers%s	a-contai.ads		a-contai.ali
@@ -93,7 +93,7 @@ D g-socket.ads		20130417131026 923c234a
 D interfac.ads		20130417131027 cb4a8015
 D i-c.ads		20130417131026 5421119b
 D i-cstrea.ads		20130417131026 8128536b
-D server.adb		20140205185843 a2fb3847
+D server.adb		20140207160116 f3b37c71
 D system.ads		20130417131036 f2f2d889
 D s-addima.ads		20130417131028 a1ec9d3a
 D s-atacco.ads		20130417131028 4c36d12f
@@ -130,20 +130,20 @@ D s-traent.ads		20130417131033 5221ee41
 D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
 D tcp.ads		20140205184446 919f12a3
-D tcp-server.ads	20140206231904 42a14882
-D tcp-server.adb	20140206232803 098f53af
+D tcp-server.ads	20140207161048 64676c6d
+D tcp-server.adb	20140207161709 957f067d
 X 10 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[5|67]>
 X 22 server.adb
 3U11*server 3b11 9l5 9t11
-4K17 mainServer[59|17] 7r9
+4K17 Main_Server[59|17] 7r9
 X 41 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 X 58 tcp.ads
-1K9*TCP 22|1r6 4r35 58|3e8
+1K9*TCP 22|1r6 4r36 58|3e8
 X 59 tcp-server.ads
-17k13*Server 22|1w10 4r39 59|31e15
-18U19 Start 22|7s20[4]
+17k13*Server 22|1w10 4r40 59|31e15
+19U14 Start 22|7s21[4]
 

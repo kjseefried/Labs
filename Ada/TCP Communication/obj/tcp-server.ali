@@ -22,11 +22,11 @@ RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK
 
-U tcp.server%b		tcp-server.adb		4b2e1b2d NE OO PK GE IU
+U tcp.server%b		tcp-server.adb		f1186a10 NE OO PK GE IU
 W ada.streams%s		a-stream.ads		a-stream.ali
 W tcp%s			tcp.ads			tcp.ali
 
-U tcp.server%s		tcp-server.ads		1d560ffe BN EE NE OO PK GE IU
+U tcp.server%s		tcp-server.ads		3b902b11 BN EE NE OO PK GE IU
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.doubly_linked_lists%s
@@ -78,21 +78,21 @@ D s-traent.ads		20130417131033 5221ee41
 D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
 D tcp.ads		20140205184446 919f12a3
-D tcp-server.ads	20140206231904 42a14882
-D tcp-server.adb	20140206232803 098f53af
+D tcp-server.ads	20140207161048 64676c6d
+D tcp-server.adb	20140207161709 957f067d
 X 1 ada.ads
-16K9*Ada 19e8 38|1r6 2r6 3r6 5r6 8r5 10r5 39|9r3
+16K9*Ada 19e8 38|1r6 2r6 3r6 5r6 8r5 9r5
 X 2 a-contai.ads
-16K13*Containers 24e19 38|5r10 10r9
+16K13*Containers 24e19 38|5r10 9r9
 20I9*Count_Type<integer>
 X 3 a-cdlili.ads
-45k24*Doubly_Linked_Lists 381e39 38|5w21 26r29
-49R9 List 38|28r27[26]
-58R9 Cursor 39|78r51[38|26] 98r50[38|26]
-72V13 Length{2|20I9} 39|105s21[38|26]
-78V13 Element{15|1006P9} 39|79s51[38|26] 99s51[38|26]
-146U14 Append 39|56s13[38|26]
-226U14 Iterate 39|90s14[38|26] 107s13[38|26]
+45k24*Doubly_Linked_Lists 381e39 38|5w21 27r31
+49R9 List 38|29r27[27]
+58R9 Cursor 39|88r53[38|27] 115r52[38|27]
+72V13 Length{2|20I9} 39|124s24[38|27]
+78V13 Element{15|1006P9} 39|89s55[38|27] 116s55[38|27]
+146U14 Append 39|60s13[38|27]
+226U14 Iterate 39|102s19[38|27] 126s15[38|27]
 X 7 a-ioexce.ads
 18K13*IO_Exceptions 30e22 38|2w10
 X 8 a-iteint.ads
@@ -101,74 +101,72 @@ X 8 a-iteint.ads
 X 9 a-stream.ads
 36K13*Streams 69e16 38|3w10
 X 11 a-textio.ads
-49K13*Text_IO 471e16 38|1w10 8r9 39|9r7
-143U14*Flush 39|87s4
-166U14*New_Line 39|9s15
-242U14*Put 39|86s4
-249U14*Get_Line 39|88s4
-263U14*Put_Line 39|21s3 29s4 57s4 101s4 105s3
+49K13*Text_IO 471e16 38|1w10 8r9
+143U14*Flush 39|98s7
+242U14*Put 39|97s7
+249U14*Get_Line 39|99s7
+263U14*Put_Line 39|20s5 30s8 61s4 118s8 124s6
 X 14 gnat.ads
-34K9*GNAT 37e9 38|4r6 9r5 11r10
+34K9*GNAT 37e9 38|4r6 7r5 10r10
 X 15 g-socket.ads
-58K14*Sockets 1262e17 38|4w11 11r15 15r19 24r19 26r49 39|10r3 11r3 12r62
-. 15r3 16r34 17r34 20r3 28r8 39r17 40r17 41r17 42r17 46r4 55r14 57r15 79r14
-. 99r14
-412I9*Socket_Type 38|24r27 39|41r25
+58K14*Sockets 1262e17 38|4w11 10r15 15r11 26r14 27r52 39|8r5 10r5 11r20 14r5
+. 15r19 16r19 19r5 29r10 41r17 42r17 43r17 44r17 49r4 59r14 61r15 89r18 116r18
+412I9*Socket_Type 38|26r22 39|43r25
 439O12*Timeval_Duration{duration}
 441O12*Selector_Duration{439O12}
-444E9*Selector_Status 444e57 39|39r25
-451X4*Socket_Error 39|28r16
-463n25*Family_Inet{463E9} 39|16r42
-479I9*Port_Type<integer> 38|15r27
-505R9*Sock_Addr_Type 508e14 39|40r25
-505e25*Family{463E9} 39|16m24
-506r7*Addr{488R9} 39|17m24
-507i7*Port{479I9} 39|18m24
-521V13*Image{string} 39|57s23
-524V13*Inet_Addr{488R9} 39|17s42
-683n7*Reuse_Address{681E9} 39|12r70
-699e22*Name{681E9} 39|12m51
-708b13*Enabled{boolean} 39|13m51
-805U14*Create_Socket 39|10s11
-821U14*Accept_Socket 39|46s12
-822i7 Server{412I9} 39|47r27
-823i7 Socket{412I9} 39|48r27
-824r7 Address{505R9} 39|49r27
-825o7 Timeout{441O12} 39|50r27
-827e7 Status{444E9} 39|51r27
-835U14*Bind_Socket 39|15s11
-886U14*Listen_Socket 39|20s11
-993U14*Set_Socket_Option 39|11s11
-996r7 Option{699R9} 39|11r40
-1006P9*Stream_Access(9|39R9) 38|11r23 26r57 39|42r25 79r22 99r22
-1009V13*Stream{1006P9} 39|55s22
+444E9*Selector_Status 444e57 39|41r25
+451X4*Socket_Error 39|29r18
+463n25*Family_Inet{463E9} 39|15r27
+479I9*Port_Type<integer> 38|15r19
+505R9*Sock_Addr_Type 508e14 39|42r25
+505e25*Family{463E9} 39|15m9
+506r7*Addr{488R9} 39|16m9
+507i7*Port{479I9} 39|17m9
+521V13*Image{string} 39|61s23
+524V13*Inet_Addr{488R9} 39|16s27
+683n7*Reuse_Address{681E9} 39|11r28
+699e22*Name{681E9} 39|11m9
+708b13*Enabled{boolean} 39|12m9
+805U14*Create_Socket 39|8s13
+821U14*Accept_Socket 39|49s12
+822i7 Server{412I9} 39|50r27
+823i7 Socket{412I9} 39|51r27
+824r7 Address{505R9} 39|52r27
+825o7 Timeout{441O12} 39|53r27
+827e7 Status{444E9} 39|54r27
+835U14*Bind_Socket 39|14s13
+886U14*Listen_Socket 39|19s13
+993U14*Set_Socket_Option 39|10s13
+996r7 Option{699R9} 39|10r42
+1006P9*Stream_Access(9|39R9) 38|10r23 27r60 39|44r25 89r26 116r26
+1009V13*Stream{1006P9} 39|59s22
 X 37 tcp.ads
-1K9*TCP 3e8 38|17r9 31r5 39|1r14 114r5
+1K9*TCP 3e8 38|17r9 31r5 39|1r14 134r5
 X 38 tcp-server.ads
-14s9 IP{string} 39|17r53 21r34
-15i9 PORT{15|479I9} 39|18r34 21r45
-17k13*Server 37|1k9 38|14z9 15z9 31l9 31e15 39|1b18 114l9 114t15
-18U19*Start 39|5b12 30t5
-19T19*listenerTask 39|24r8 38b12 69t5
-20T19*writerTask 39|62r10 74b12 93t5
-21T19*readerTask 39|63r10 97b12 109t5
-24i9 Receiver{15|412I9} 39|10m26 11r30 15r24 20r26 47r38
-26K10 channelList[3|45] 27r8 28r15 39|78r39 79r39 98r38 99r39
-28r4 channels{3|49R9[26]} 39|56m4 56r4 90r5 105r12 107r4
+14s4 IP{string} 39|16r38 20r37
+15i4 Port{15|479I9} 39|17r19 20r48
+17k13*Server 37|1k9 38|14z4 15z4 31l9 31e15 39|1b18 134l9 134t15
+19U14*Start 39|6b12 32l6 32t11
+20T14*Listener_Task 39|23r13 40b12 75t5
+21T14*Writer_Task 39|68r10 84b12 106l6 106t17
+22T14*Reader_Task 39|69r10 113b12 129l6 129t17
+26i4 Receiver{15|412I9} 39|8m28 10r32 14r26 19r28 50r38
+27K12 channelList[3|45] 28r8 29r15 39|88r41 89r43 115r40 116r43
+29r4 channels{3|49R9[27]} 39|60m4 60r4 102r10 124r15 126r6
 X 39 tcp-server.adb
-24t3 lt{38|19T19}
-39e3 status{15|444E9} 51m38 51r38
-40r3 Client{15|505R9} 49m38 57r30
-41i3 Connection{15|412I9} 48m38 55r30
-42p3 stream{15|1006P9} 55m4 56r21 58r20
-62t5 wt{38|20T19}
-63t5 rt{38|21T19}
-75a3 Message{string} 81r28 81r37 88m14 89r7
-76i3 MessageLength{natural} 81r54 88m23
-78U13 write 78b13 78>20 82l7 82t12 90r23
-78r20 channelCursor{3|58R9[38|26]} 79r60
-79p4 channel{15|1006P9} 81r19
-98U13 read 98b13 98>19 102l7 102t11 107r22
-98r19 channelCursor{3|58R9[38|26]} 99r60
-99p4 channel{15|1006P9} 101r45
+23t8 lt{38|20T14}
+41e3 status{15|444E9} 54m38 54r38
+42r3 Client{15|505R9} 52m38 61r30
+43i3 Connection{15|412I9} 51m38 59r30
+44p3 stream{15|1006P9} 59m4 60r21 64r20
+68t5 wt{38|21T14}
+69t5 rt{38|22T14}
+85a5 Message{string} 91r32 91r41 99m17 101r10
+86i5 MessageLength{natural} 91r58 99m26
+88U15 write 88b15 88>22 92l9 92t14 102r28
+88r22 channelCursor{3|58R9[38|27]} 89r64
+89p8 channel{15|1006P9} 91r23
+115U15 read 115b15 115>21 119l9 119t13 126r24
+115r21 channelCursor{3|58R9[38|27]} 116r64
+116p8 channel{15|1006P9} 118r49
 

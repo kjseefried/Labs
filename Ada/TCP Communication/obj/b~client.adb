@@ -8,36 +8,36 @@ with Ada.Exceptions;
 package body ada_main is
    pragma Warnings (Off);
 
-   E121 : Short_Integer; pragma Import (Ada, E121, "system__os_lib_E");
+   E117 : Short_Integer; pragma Import (Ada, E117, "system__os_lib_E");
    E013 : Short_Integer; pragma Import (Ada, E013, "system__soft_links_E");
    E023 : Short_Integer; pragma Import (Ada, E023, "system__exception_table_E");
-   E055 : Short_Integer; pragma Import (Ada, E055, "ada__io_exceptions_E");
-   E100 : Short_Integer; pragma Import (Ada, E100, "ada__tags_E");
-   E098 : Short_Integer; pragma Import (Ada, E098, "ada__streams_E");
+   E051 : Short_Integer; pragma Import (Ada, E051, "ada__io_exceptions_E");
+   E096 : Short_Integer; pragma Import (Ada, E096, "ada__tags_E");
+   E094 : Short_Integer; pragma Import (Ada, E094, "ada__streams_E");
    E048 : Short_Integer; pragma Import (Ada, E048, "interfaces__c_E");
-   E118 : Short_Integer; pragma Import (Ada, E118, "interfaces__c__strings_E");
+   E114 : Short_Integer; pragma Import (Ada, E114, "interfaces__c__strings_E");
    E029 : Short_Integer; pragma Import (Ada, E029, "system__exceptions_E");
-   E116 : Short_Integer; pragma Import (Ada, E116, "system__finalization_root_E");
-   E114 : Short_Integer; pragma Import (Ada, E114, "ada__finalization_E");
-   E132 : Short_Integer; pragma Import (Ada, E132, "system__storage_pools_E");
-   E126 : Short_Integer; pragma Import (Ada, E126, "system__finalization_masters_E");
-   E138 : Short_Integer; pragma Import (Ada, E138, "system__storage_pools__subpools_E");
+   E112 : Short_Integer; pragma Import (Ada, E112, "system__finalization_root_E");
+   E110 : Short_Integer; pragma Import (Ada, E110, "ada__finalization_E");
+   E128 : Short_Integer; pragma Import (Ada, E128, "system__storage_pools_E");
+   E122 : Short_Integer; pragma Import (Ada, E122, "system__finalization_masters_E");
+   E134 : Short_Integer; pragma Import (Ada, E134, "system__storage_pools__subpools_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__calendar_E");
-   E052 : Short_Integer; pragma Import (Ada, E052, "ada__calendar__delays_E");
-   E134 : Short_Integer; pragma Import (Ada, E134, "system__pool_global_E");
-   E124 : Short_Integer; pragma Import (Ada, E124, "system__file_control_block_E");
+   E144 : Short_Integer; pragma Import (Ada, E144, "ada__calendar__delays_E");
+   E130 : Short_Integer; pragma Import (Ada, E130, "system__pool_global_E");
+   E120 : Short_Integer; pragma Import (Ada, E120, "system__file_control_block_E");
    E164 : Short_Integer; pragma Import (Ada, E164, "ada__streams__stream_io_E");
-   E112 : Short_Integer; pragma Import (Ada, E112, "system__file_io_E");
-   E143 : Short_Integer; pragma Import (Ada, E143, "gnat__sockets_E");
+   E108 : Short_Integer; pragma Import (Ada, E108, "system__file_io_E");
+   E139 : Short_Integer; pragma Import (Ada, E139, "gnat__sockets_E");
    E156 : Short_Integer; pragma Import (Ada, E156, "system__pool_size_E");
    E017 : Short_Integer; pragma Import (Ada, E017, "system__secondary_stack_E");
    E152 : Short_Integer; pragma Import (Ada, E152, "gnat__sockets__thin_common_E");
-   E146 : Short_Integer; pragma Import (Ada, E146, "gnat__sockets__thin_E");
+   E142 : Short_Integer; pragma Import (Ada, E142, "gnat__sockets__thin_E");
    E162 : Short_Integer; pragma Import (Ada, E162, "system__strings__stream_ops_E");
    E172 : Short_Integer; pragma Import (Ada, E172, "system__tasking__initialization_E");
    E180 : Short_Integer; pragma Import (Ada, E180, "system__tasking__protected_objects_E");
-   E057 : Short_Integer; pragma Import (Ada, E057, "ada__real_time_E");
-   E108 : Short_Integer; pragma Import (Ada, E108, "ada__text_io_E");
+   E053 : Short_Integer; pragma Import (Ada, E053, "ada__real_time_E");
+   E104 : Short_Integer; pragma Import (Ada, E104, "ada__text_io_E");
    E182 : Short_Integer; pragma Import (Ada, E182, "system__tasking__protected_objects__entries_E");
    E178 : Short_Integer; pragma Import (Ada, E178, "system__tasking__queuing_E");
    E168 : Short_Integer; pragma Import (Ada, E168, "system__tasking__stages_E");
@@ -57,7 +57,7 @@ package body ada_main is
       begin
          F1;
       end;
-      E108 := E108 - 1;
+      E104 := E104 - 1;
       declare
          procedure F2;
          pragma Import (Ada, F2, "ada__text_io__finalize_spec");
@@ -68,16 +68,16 @@ package body ada_main is
          procedure F3;
          pragma Import (Ada, F3, "gnat__sockets__finalize_body");
       begin
-         E143 := E143 - 1;
+         E139 := E139 - 1;
          F3;
       end;
-      E126 := E126 - 1;
-      E138 := E138 - 1;
+      E122 := E122 - 1;
+      E134 := E134 - 1;
       declare
          procedure F4;
          pragma Import (Ada, F4, "system__file_io__finalize_body");
       begin
-         E112 := E112 - 1;
+         E108 := E108 - 1;
          F4;
       end;
       E156 := E156 - 1;
@@ -104,10 +104,10 @@ package body ada_main is
          procedure F8;
          pragma Import (Ada, F8, "system__file_control_block__finalize_spec");
       begin
-         E124 := E124 - 1;
+         E120 := E120 - 1;
          F8;
       end;
-      E134 := E134 - 1;
+      E130 := E130 - 1;
       declare
          procedure F9;
          pragma Import (Ada, F9, "system__pool_global__finalize_spec");
@@ -247,57 +247,57 @@ package body ada_main is
       System.Exception_Table'Elab_Body;
       E023 := E023 + 1;
       Ada.Io_Exceptions'Elab_Spec;
-      E055 := E055 + 1;
+      E051 := E051 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Streams'Elab_Spec;
-      E098 := E098 + 1;
+      E094 := E094 + 1;
       Interfaces.C'Elab_Spec;
       Interfaces.C.Strings'Elab_Spec;
       System.Exceptions'Elab_Spec;
       E029 := E029 + 1;
       System.Finalization_Root'Elab_Spec;
-      E116 := E116 + 1;
+      E112 := E112 + 1;
       Ada.Finalization'Elab_Spec;
-      E114 := E114 + 1;
+      E110 := E110 + 1;
       System.Storage_Pools'Elab_Spec;
-      E132 := E132 + 1;
+      E128 := E128 + 1;
       System.Finalization_Masters'Elab_Spec;
       System.Storage_Pools.Subpools'Elab_Spec;
       Ada.Calendar'Elab_Spec;
       Ada.Calendar'Elab_Body;
       E006 := E006 + 1;
       Ada.Calendar.Delays'Elab_Body;
-      E052 := E052 + 1;
+      E144 := E144 + 1;
       System.Pool_Global'Elab_Spec;
-      E134 := E134 + 1;
+      E130 := E130 + 1;
       System.File_Control_Block'Elab_Spec;
-      E124 := E124 + 1;
+      E120 := E120 + 1;
       Ada.Streams.Stream_Io'Elab_Spec;
       E164 := E164 + 1;
       Gnat.Sockets'Elab_Spec;
       System.Pool_Size'Elab_Spec;
       E156 := E156 + 1;
       System.File_Io'Elab_Body;
-      E112 := E112 + 1;
-      E138 := E138 + 1;
+      E108 := E108 + 1;
+      E134 := E134 + 1;
       System.Finalization_Masters'Elab_Body;
-      E126 := E126 + 1;
-      E118 := E118 + 1;
+      E122 := E122 + 1;
+      E114 := E114 + 1;
       E048 := E048 + 1;
       Ada.Tags'Elab_Body;
-      E100 := E100 + 1;
+      E096 := E096 + 1;
       System.Soft_Links'Elab_Body;
       E013 := E013 + 1;
       System.Os_Lib'Elab_Body;
-      E121 := E121 + 1;
+      E117 := E117 + 1;
       System.Secondary_Stack'Elab_Body;
       E017 := E017 + 1;
       Gnat.Sockets.Thin_Common'Elab_Spec;
       E152 := E152 + 1;
       Gnat.Sockets.Thin'Elab_Body;
-      E146 := E146 + 1;
+      E142 := E142 + 1;
       Gnat.Sockets'Elab_Body;
-      E143 := E143 + 1;
+      E139 := E139 + 1;
       System.Strings.Stream_Ops'Elab_Body;
       E162 := E162 + 1;
       System.Tasking.Initialization'Elab_Body;
@@ -306,10 +306,10 @@ package body ada_main is
       E180 := E180 + 1;
       Ada.Real_Time'Elab_Spec;
       Ada.Real_Time'Elab_Body;
-      E057 := E057 + 1;
+      E053 := E053 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
-      E108 := E108 + 1;
+      E104 := E104 + 1;
       System.Tasking.Protected_Objects.Entries'Elab_Spec;
       E182 := E182 + 1;
       System.Tasking.Queuing'Elab_Body;
@@ -352,11 +352,11 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /Users/Alex/Desktop/Server/obj/tcp.o
-   --   /Users/Alex/Desktop/Server/obj/tcp-client.o
-   --   /Users/Alex/Desktop/Server/obj/client.o
-   --   -L/Users/Alex/Desktop/Server/obj/
-   --   -L/Users/Alex/Desktop/Server/obj/
+   --   /Users/Alex/Documents/Git/Labs/Ada/TCP Communication/obj/tcp.o
+   --   /Users/Alex/Documents/Git/Labs/Ada/TCP Communication/obj/tcp-client.o
+   --   /Users/Alex/Documents/Git/Labs/Ada/TCP Communication/obj/client.o
+   --   -L/Users/Alex/Documents/Git/Labs/Ada/TCP Communication/obj/
+   --   -L/Users/Alex/Documents/Git/Labs/Ada/TCP Communication/obj/
    --   -L/usr/local/gnat/lib/gcc/x86_64-apple-darwin12.2.0/4.7.4/adalib/
    --   -static
    --   -lgnarl

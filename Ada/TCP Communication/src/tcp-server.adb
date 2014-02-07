@@ -1,33 +1,35 @@
 package body TCP.Server is
 
-
-
- Procedure start is
-
-
+ -----------
+ -- Start --
+ -----------
+ Procedure Start is
  begin
-  Ada.Text_IO.New_Line (50);
-  Sockets.Create_Socket (Receiver);
-  Sockets.Set_Socket_Option (Receiver, Option => (
-						  Name    => Sockets.Reuse_Address,
-						  Enabled => True));
+    Sockets.Create_Socket (Receiver);
 
-  Sockets.Bind_Socket (Receiver, (
-		       Family => Sockets.Family_Inet,
-		       Addr   => Sockets.Inet_Addr (IP),
-		       Port   => PORT));
+    Sockets.Set_Socket_Option (Receiver, Option => (
+  	Name    => Sockets.Reuse_Address,
+	Enabled => True));
 
-  Sockets.Listen_Socket (Receiver);
-  Put_Line ("Server started: " & IP & ":" & PORT'Img);
+    Sockets.Bind_Socket (Receiver, (
+  	Family => Sockets.Family_Inet,
+	Addr   => Sockets.Inet_Addr( IP ),
+  	Port   => Port));
 
- declare
-  lt : listenerTask;
-  begin null; end;
+    Sockets.Listen_Socket (Receiver);
+    Put_Line ( "Server started: " & IP & ":" & PORT'Img );
+
+    declare
+       lt : Listener_Task;
+    begin
+       null;
+    end;
 
  exception
-  when Sockets.Socket_Error =>
-   Put_Line ("Error occurred. Try another port.");
- end;
+    when Sockets.Socket_Error =>
+       Put_Line ( "Error occurred. Try another port." );
+
+ end Start;
 
 
 
@@ -35,7 +37,7 @@ package body TCP.Server is
 
 
 
- task body listenerTask is
+ task body Listener_Task is
   status      : Sockets.Selector_Status;
   Client      : Sockets.Sock_Addr_Type;
   Connection  : Sockets.Socket_Type;
@@ -63,8 +65,8 @@ package body TCP.Server is
 
 
    declare
-    wt : writerTask;
-    rt : readerTask;
+    wt : Writer_Task;
+    rt : Reader_Task;
    begin
     null;
    end;
@@ -75,42 +77,56 @@ package body TCP.Server is
 
 
 
- task body writerTask is
-  Message       : String (1 .. 128);
-  MessageLength : Natural;
 
-  procedure write (channelCursor : in channelList.Cursor) is
-   channel : sockets.Stream_Access := channelList.Element (channelCursor);
-  begin
-   String'Output (channel, Message (Message'First .. MessageLength));
-  end write;
+
+
+
+ task body Writer_Task is
+    Message       : String (1 .. 128);
+    MessageLength : Natural;
+
+    procedure write (channelCursor : in channelList.Cursor) is
+       channel : sockets.Stream_Access := channelList.Element (channelCursor);
+    begin
+       String'Output (channel, Message (Message'First .. MessageLength));
+    end write;
 
  begin
-  loop
-   Put ("> ");
-   Flush;
-   Get_Line (Message, MessageLength);
-   if Message'Length > 0  then
-    channels.Iterate (write'Access );
-   end if;
-  end loop;
- end;
+
+   loop
+      Put ("> ");
+      Flush;
+      Get_Line (Message, MessageLength);
+
+      if Message'Length > 0  then
+         channels.Iterate (write'Access );
+      end if;
+   end loop;
+
+ end Writer_Task;
 
 
 
- task body readerTask is
-  procedure read (channelCursor : in channelList.Cursor) is
-   channel : Sockets.Stream_Access := channelList.Element (channelCursor);
-  begin
-   Put_Line ("incoming > " & String'Input ( channel ));
-  end read;
+
+
+
+ task body Reader_Task is
+
+    procedure read (channelCursor : in channelList.Cursor) is
+       channel : Sockets.Stream_Access := channelList.Element (channelCursor);
+    begin
+       Put_Line ("incoming > " & String'Input ( channel ));
+    end read;
+
  begin
+
   loop
-  Put_Line(channels.Length'Img);
-   delay 1.0;
-   channels.Iterate (read'Access);
+     Put_Line(channels.Length'Img);
+     delay 1.0;
+     channels.Iterate (read'Access);
   end loop;
- end;
+
+ end Reader_Task;
 
 
 

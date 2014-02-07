@@ -35,7 +35,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#e05a70c5#;
+   u00001 : constant Version_32 := 16#97d4101c#;
    pragma Export (C, u00001, "serverB");
    u00002 : constant Version_32 := 16#3935bd10#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -423,9 +423,9 @@ package ada_main is
    pragma Export (C, u00193, "system__traces__taskingS");
    u00194 : constant Version_32 := 16#919f12a3#;
    pragma Export (C, u00194, "tcpS");
-   u00195 : constant Version_32 := 16#4b2e1b2d#;
+   u00195 : constant Version_32 := 16#f1186a10#;
    pragma Export (C, u00195, "tcp__serverB");
-   u00196 : constant Version_32 := 16#1d560ffe#;
+   u00196 : constant Version_32 := 16#3b902b11#;
    pragma Export (C, u00196, "tcp__serverS");
    --  BEGIN ELABORATION ORDER
    --  ada%s

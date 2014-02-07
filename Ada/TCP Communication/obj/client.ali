@@ -9,11 +9,8 @@ A -gnatA
 P SS ZX
 
 RN
-RV NO_DELAY
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
-RV NO_FIXED_POINT
-RV NO_RELATIVE_DELAY
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_STREAMS
 RV NO_TASK_HIERARCHY
@@ -24,10 +21,9 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK
 RV MAX_TASKS=1+
 
-U client%b		client.adb		801fc12c NE OO SU
+U client%b		client.adb		b388aebc NE OO SU
 Z ada%s			ada.ads			ada.ali
 Z ada.calendar%s	a-calend.adb		a-calend.ali
-W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.streams%s		a-stream.ads		a-stream.ali
@@ -50,7 +46,6 @@ W tcp.client%s		tcp-client.adb		tcp-client.ali
 
 D ada.ads		20130417131023 3ffc8e18
 D a-calend.ads		20130417131018 d86d6c8c
-D a-caldel.ads		20130417131018 9f20b83d
 D a-except.ads		20130417131019 10fcae55
 D a-finali.ads		20130417131020 52ecdc1b
 D a-ioexce.ads		20130417131020 8b9de6cd
@@ -60,7 +55,7 @@ D a-tags.ads		20130417131022 6c0509d0
 D a-textio.ads		20130417131022 386df5d4
 D a-unccon.ads		20130417131022 f9eb8f06
 D a-uncdea.ads		20130417131022 f15a5ed1
-D client.adb		20140205221340 f52c67fb
+D client.adb		20140207160314 fb36b62b
 D gnat.ads		20130417131026 fd2ad2f1
 D g-socket.ads		20130417131026 923c234a
 D interfac.ads		20130417131027 cb4a8015
@@ -99,17 +94,17 @@ D s-traent.ads		20130417131033 5221ee41
 D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
 D tcp.ads		20140205184446 919f12a3
-D tcp-client.ads	20140205190605 7533a6d7
-D tcp-client.adb	20140205231608 f9f3a2a0
-X 13 client.adb
+D tcp-client.ads	20140207160811 48be1897
+D tcp-client.adb	20140207160800 8555245b
+X 12 client.adb
 3U11*Client 3b11 9l5 9t11
-4K17 mainClient[52|14] 7r9
-X 36 s-stausa.ads
+4K17 Test_Client[51|14] 7r9
+X 35 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 51 tcp.ads
-1K9*TCP 13|1r6 4r35 51|3e8
-X 52 tcp-client.ads
-14k13*Client 13|1w10 4r39 52|26e4
-15U19 Connect 13|7s20[4]
+X 50 tcp.ads
+1K9*TCP 12|1r6 4r36 50|3e8
+X 51 tcp-client.ads
+14k13*Client 12|1w10 4r40 51|26e4
+15U19 Connect 12|7s21[4]
 

@@ -12,9 +12,7 @@ RV NO_CALENDAR
 RV NO_DELAY
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
-RV NO_FIXED_POINT
 RV NO_IO
-RV NO_RELATIVE_DELAY
 RV NO_STREAMS
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
@@ -23,11 +21,11 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK
 
-U tcp.client%b		tcp-client.adb		8cc00477 NE OO PK GE IU
+U tcp.client%b		tcp-client.adb		cdeb3ccc NE OO PK GE IU
 W ada.streams%s		a-stream.ads		a-stream.ali
 W tcp%s			tcp.ads			tcp.ali
 
-U tcp.client%s		tcp-client.ads		31a9069c BN EE NE OO PK GE IU
+U tcp.client%s		tcp-client.ads		0c24b8dc BN EE NE OO PK GE IU
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
@@ -71,8 +69,8 @@ D s-traent.ads		20130417131033 5221ee41
 D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
 D tcp.ads		20140205184446 919f12a3
-D tcp-client.ads	20140205190605 7533a6d7
-D tcp-client.adb	20140205231608 f9f3a2a0
+D tcp-client.ads	20140207160811 48be1897
+D tcp-client.adb	20140207160800 8555245b
 X 1 ada.ads
 16K9*Ada 19e8 35|1r6 2r6 3r6 4r6 7r5
 X 2 a-calend.ads
@@ -83,47 +81,46 @@ X 6 a-stream.ads
 36K13*Streams 69e16 35|3w10
 X 8 a-textio.ads
 49K13*Text_IO 471e16 35|1w10 7r9
-143U14*Flush 36|48s4 63s3
-166U14*New_Line 36|9s3
-223U14*Get_Immediate 36|78s3
-242U14*Put 36|47s4
-249U14*Get_Line 36|49s4
-263U14*Put_Line 36|10s3 18s3 30s4 33s4 64s4 77s3
+143U14*Flush 36|45s6 60s6
+223U14*Get_Immediate 36|75s5
+242U14*Put 36|44s6
+249U14*Get_Line 36|46s6
+263U14*Put_Line 36|9s3 27s8 30s8 61s6 74s5
 X 11 gnat.ads
 34K9*GNAT 37e9 35|5r6 8r5 12r19 22r19 23r19
 X 12 g-socket.ads
-58K14*Sockets 1262e17 35|5w11 12r24 21r19 22r24 23r24 24r19 36|11r3 12r3
-. 13r19 15r3 16r14 29r8
-379U14*Initialize 36|11s11
+58K14*Sockets 1262e17 35|5w11 12r24 21r19 22r24 23r24 24r19 36|10r3 11r3
+. 12r19 14r3 15r14 26r10
+379U14*Initialize 36|10s11
 412I9*Socket_Type 35|21r27 22r32
-451X4*Socket_Error 36|29r16
+451X4*Socket_Error 36|26r18
 479I9*Port_Type<integer> 35|12r32
 505R9*Sock_Addr_Type 508e14 35|24r27
-506r7*Addr{488R9} 36|13m11
-507i7*Port{479I9} 36|14m11
-524V13*Inet_Addr{488R9} 36|13s27
-805U14*Create_Socket 36|12s11
-844U14*Connect_Socket 36|15s11
+506r7*Addr{488R9} 36|12m11
+507i7*Port{479I9} 36|13m11
+524V13*Inet_Addr{488R9} 36|12s27
+805U14*Create_Socket 36|11s11
+844U14*Connect_Socket 36|14s11
 1006P9*Stream_Access(6|39R9) 35|23r32
-1009V13*Stream{1006P9} 36|16s22
+1009V13*Stream{1006P9} 36|15s22
 X 34 tcp.ads
-1K9*TCP 3e8 36|1r14 81r5
+1K9*TCP 3e8 36|1r14 78r5
 X 35 tcp-client.ads
-11s9 IP{string} 36|10r31 13r38
-12i9 PORT{12|479I9} 36|10r40 14r19
-14k13*Client 34|1k9 35|11z9 12z9 26e4 36|1b18 81l9 81t15
-15U19*Connect 36|7b12 36l6 36t13
-16U19*pressAnyKeyToExit 36|31s4 34s4 74b12 79l6 79t23
-17T19*writerTask 36|23r9 42b12 52l6 52t16
-18T19*readerTask 36|22r9 60b12 66l6 66t16
-21i9 Socket{12|412I9} 36|12m26 15r27 16r30
+11s9 IP{string} 36|9r31 12r38
+12i9 Port{12|479I9} 36|9r40 13r19
+14k13*Client 34|1k9 35|11z9 12z9 26e4 36|1b18 78l9 78t15
+15U19*Connect 36|7b12 33l6 33t13
+16U19*Press_Any_Key_To_Exit 36|28s8 31s8 71b12 76l6 76t27
+17T19*Writer_Task 36|20r11 39b12 49l6 49t17
+18T19*Reader_Tast 36|19r11 57b12 63l6 63t17
+21i9 Socket{12|412I9} 36|11m26 14r27 15r30
 22i9 Receiver{12|412I9}
-23p9 channel{12|1006P9} 36|16m3 50r19 64r35
-24r9 Address{12|505R9} 36|13m3 14m3 15r35
+23p9 Channel{12|1006P9} 36|15m3 47r21 61r37
+24r9 Address{12|505R9} 36|12m3 13m3 14r35
 X 36 tcp-client.adb
-22t4 rt{35|18T19}
-23t4 wt{35|17T19}
-43a3 Message{string} 49m14 50r28 50r37
-44i3 MessageLength{natural} 49m23 50r54
-75e3 ch{character} 78m18
+19t6 rt{35|18T19}
+20t6 wt{35|17T19}
+40a5 Message{string} 46m16 47r30 47r39
+41i5 MessageLength{natural} 46m25 47r56
+72e5 ch{character} 75m20
 

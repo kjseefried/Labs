@@ -9,18 +9,18 @@ use GNAT;
 
 generic
    	IP 	: String;
-   	PORT 	: GNAT.Sockets.Port_Type;
+   	Port 	: GNAT.Sockets.Port_Type;
 
 package TCP.Client is
 	Procedure Connect;
-	procedure pressAnyKeyToExit;
-   	task type writerTask;
-   	task type readerTask;
+	procedure Press_Any_Key_To_Exit;
+   	task type Writer_Task;
+   	task type Reader_Tast;
 
 private
 	Socket  : Sockets.Socket_Type;
    	Receiver: GNAT.Sockets.Socket_Type;
-   	channel	: GNAT.Sockets.Stream_Access;
+   	Channel	: GNAT.Sockets.Stream_Access;
 	Address : Sockets.Sock_Addr_Type;
 
 end;

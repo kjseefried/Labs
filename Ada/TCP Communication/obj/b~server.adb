@@ -355,11 +355,11 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /Users/Alex/Desktop/Server/obj/tcp.o
-   --   /Users/Alex/Desktop/Server/obj/tcp-server.o
-   --   /Users/Alex/Desktop/Server/obj/server.o
-   --   -L/Users/Alex/Desktop/Server/obj/
-   --   -L/Users/Alex/Desktop/Server/obj/
+   --   /Users/Alex/Documents/Git/Labs/Ada/TCP Communication/obj/tcp.o
+   --   /Users/Alex/Documents/Git/Labs/Ada/TCP Communication/obj/tcp-server.o
+   --   /Users/Alex/Documents/Git/Labs/Ada/TCP Communication/obj/server.o
+   --   -L/Users/Alex/Documents/Git/Labs/Ada/TCP Communication/obj/
+   --   -L/Users/Alex/Documents/Git/Labs/Ada/TCP Communication/obj/
    --   -L/usr/local/gnat/lib/gcc/x86_64-apple-darwin12.2.0/4.7.4/adalib/
    --   -static
    --   -lgnarl

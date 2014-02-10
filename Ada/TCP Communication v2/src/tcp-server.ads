@@ -22,7 +22,7 @@ package TCP.Server is
    end Client_Type;
 
 
-   package Channel_List_Type is new Doubly_Linked_Lists( Client_Access );
+   package Channel_List_Type is new Doubly_Linked_Lists( Client_Type );
    use Channel_List_Type;
 
    Clients : Channel_List_Type.List;

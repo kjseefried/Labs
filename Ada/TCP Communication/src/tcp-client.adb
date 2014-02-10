@@ -41,10 +41,8 @@ package body TCP.Client is
     MessageLength : Natural;
  begin
   loop
-     Put ("> ");
-     Flush;
      Get_Line (Message, MessageLength);
-     String'Output (Channel, Message (Message'First .. MessageLength));
+     String'Output(Channel, Message (Message'First .. MessageLength));
   end loop;
  end Writer_Task;
 
@@ -57,8 +55,7 @@ package body TCP.Client is
  task body Reader_Tast is
  begin
   loop
-     Flush;
-     Put_Line ("> " & String'Input (Channel));
+     Put_Line( String'Input (Channel));
   end loop;
  end Reader_Tast;
 

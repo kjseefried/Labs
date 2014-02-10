@@ -21,7 +21,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK
 
-U tcp.client%b		tcp-client.adb		cdeb3ccc NE OO PK GE IU
+U tcp.client%b		tcp-client.adb		2b6fcfb6 NE OO PK GE IU
 W ada.streams%s		a-stream.ads		a-stream.ali
 W tcp%s			tcp.ads			tcp.ali
 
@@ -70,7 +70,7 @@ D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
 D tcp.ads		20140205184446 919f12a3
 D tcp-client.ads	20140207160811 48be1897
-D tcp-client.adb	20140207160800 8555245b
+D tcp-client.adb	20140210110037 63d1d721
 X 1 ada.ads
 16K9*Ada 19e8 35|1r6 2r6 3r6 4r6 7r5
 X 2 a-calend.ads
@@ -81,11 +81,9 @@ X 6 a-stream.ads
 36K13*Streams 69e16 35|3w10
 X 8 a-textio.ads
 49K13*Text_IO 471e16 35|1w10 7r9
-143U14*Flush 36|45s6 60s6
-223U14*Get_Immediate 36|75s5
-242U14*Put 36|44s6
-249U14*Get_Line 36|46s6
-263U14*Put_Line 36|9s3 27s8 30s8 61s6 74s5
+223U14*Get_Immediate 36|72s5
+249U14*Get_Line 36|44s6
+263U14*Put_Line 36|9s3 27s8 30s8 58s6 71s5
 X 11 gnat.ads
 34K9*GNAT 37e9 35|5r6 8r5 12r19 22r19 23r19
 X 12 g-socket.ads
@@ -104,23 +102,23 @@ X 12 g-socket.ads
 1006P9*Stream_Access(6|39R9) 35|23r32
 1009V13*Stream{1006P9} 36|15s22
 X 34 tcp.ads
-1K9*TCP 3e8 36|1r14 78r5
+1K9*TCP 3e8 36|1r14 75r5
 X 35 tcp-client.ads
 11s9 IP{string} 36|9r31 12r38
 12i9 Port{12|479I9} 36|9r40 13r19
-14k13*Client 34|1k9 35|11z9 12z9 26e4 36|1b18 78l9 78t15
+14k13*Client 34|1k9 35|11z9 12z9 26e4 36|1b18 75l9 75t15
 15U19*Connect 36|7b12 33l6 33t13
-16U19*Press_Any_Key_To_Exit 36|28s8 31s8 71b12 76l6 76t27
-17T19*Writer_Task 36|20r11 39b12 49l6 49t17
-18T19*Reader_Tast 36|19r11 57b12 63l6 63t17
+16U19*Press_Any_Key_To_Exit 36|28s8 31s8 68b12 73l6 73t27
+17T19*Writer_Task 36|20r11 39b12 47l6 47t17
+18T19*Reader_Tast 36|19r11 55b12 60l6 60t17
 21i9 Socket{12|412I9} 36|11m26 14r27 15r30
 22i9 Receiver{12|412I9}
-23p9 Channel{12|1006P9} 36|15m3 47r21 61r37
+23p9 Channel{12|1006P9} 36|15m3 45r20 58r30
 24r9 Address{12|505R9} 36|12m3 13m3 14r35
 X 36 tcp-client.adb
 19t6 rt{35|18T19}
 20t6 wt{35|17T19}
-40a5 Message{string} 46m16 47r30 47r39
-41i5 MessageLength{natural} 46m25 47r56
-72e5 ch{character} 75m20
+40a5 Message{string} 44m16 45r29 45r38
+41i5 MessageLength{natural} 44m25 45r55
+69e5 ch{character} 72m20
 

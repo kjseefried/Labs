@@ -42,15 +42,15 @@ package body TCP.Server is
       begin
          Stream := Sockets.Stream (Connection);
          New_Client.Set_Stream( Stream );
-         --Clients.Append( New_Client'Access );
+	 delay 0.5;
+
+         Clients.Append( New_Client'Access );
 
 	 Put_Line ( Sockets.Image (Client) & " connected.");
-	 String'Output ( Stream, "[Server] Connection successful!");
+	 New_Client.write("[Server] Connection successful!");
       end;
 
   end loop;
-
-
 
  exception
      when Sockets.Socket_Error =>
@@ -63,24 +63,28 @@ package body TCP.Server is
 
 
 
+
  task body Client_Type is
       Stream : Sockets.Stream_Access;
    begin
-     loop
-
-      accept Set_Stream (S : in Sockets.Stream_Access) do
+    accept Set_Stream (S : in Sockets.Stream_Access) do
 	Stream := S;
       end Set_Stream;
 
+     loop
 
-      accept Write (Message : in String) do
-	 String'Output ( Stream, Message );
-      end Write;
+      select
+         accept Write (Message : in String) do
+	    String'Output ( Stream, Message );
+         end Write;
 
+         or
 
-      accept Read (Message : out String) do
-	 Message := String'Input ( Stream );
-      end Read;
+         accept Read (Message : out String) do
+	    Ada.Text_IO.Put_Line("reading");
+	    Message := String'Input ( Stream );
+         end Read;
+      end select;
 
      end loop;
    end Client_Type;

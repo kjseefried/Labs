@@ -11,7 +11,6 @@ P SS ZX
 RN
 RV NO_ACCESS_SUBPROGRAMS
 RV NO_ALLOCATORS
-RV NO_DELAY
 RV NO_DISPATCH
 RV NO_DISPATCHING_CALLS
 RV NO_EXCEPTION_HANDLERS
@@ -22,7 +21,6 @@ RV NO_IMPLICIT_CONDITIONALS
 RV NO_LOCAL_ALLOCATORS
 RV NO_NESTED_FINALIZATION
 RV NO_RECURSION
-RV NO_RELATIVE_DELAY
 RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_STREAMS
@@ -36,9 +34,8 @@ RV NO_IMPLICIT_ALIASING
 RV SPARK
 RV MAX_TASKS=1+
 
-U server%b		server.adb		97d4101c NE OO SU IL
+U server%b		server.adb		42273ad2 NE OO SU IL
 Z ada%s			ada.ads			ada.ali
-W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.containers.doubly_linked_lists%s
 W ada.exceptions%s	a-except.adb		a-except.ali
@@ -73,8 +70,6 @@ W tcp%s			tcp.ads			tcp.ali
 W tcp.server%s		tcp-server.adb		tcp-server.ali
 
 D ada.ads		20130417131023 3ffc8e18
-D a-calend.ads		20130417131018 d86d6c8c
-D a-caldel.ads		20130417131018 9f20b83d
 D a-contai.ads		20130417131019 61e5e089
 D a-cdlili.ads		20130417131018 c3008bbb
 D a-cdlili.adb		20130417131018 17cec70d
@@ -130,20 +125,20 @@ D s-traent.ads		20130417131033 5221ee41
 D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
 D tcp.ads		20140205184446 919f12a3
-D tcp-server.ads	20140207161048 64676c6d
-D tcp-server.adb	20140207161709 957f067d
-X 10 a-iteint.ads
+D tcp-server.ads	20140210111940 b19446a3
+D tcp-server.adb	20140210112223 a986efac
+X 8 a-iteint.ads
 24h9 Forward_Iterator
-32h9 Reversible_Iterator<24R9[5|67]>
-X 22 server.adb
+32h9 Reversible_Iterator<24R9[3|67]>
+X 20 server.adb
 3U11*server 3b11 9l5 9t11
-4K17 Main_Server[59|17] 7r9
-X 41 s-stausa.ads
+4K17 Main_Server[57|17] 7r9
+X 39 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 58 tcp.ads
-1K9*TCP 22|1r6 4r36 58|3e8
-X 59 tcp-server.ads
-17k13*Server 22|1w10 4r40 59|31e15
-19U14 Start 22|7s21[4]
+X 56 tcp.ads
+1K9*TCP 20|1r6 4r36 56|3e8
+X 57 tcp-server.ads
+17k13*Server 20|1w10 4r40 57|33e15
+19U14 Start 20|7s21[4]
 

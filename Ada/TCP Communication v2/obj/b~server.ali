@@ -19,20 +19,20 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK
 
-U ada_main%b		b~server.adb		28a0100b NE OO PK IL
+U ada_main%b		b~server.adb		53bcb5ad NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b~server.ads		4be35007 EE NE OO PK IL
+U ada_main%s		b~server.ads		2d75e8bc EE NE OO PK IL
 W system%s		system.ads		system.ali
 
 D ada.ads		20130417131023 3ffc8e18
 D a-except.ads		20130417131019 10fcae55
 D a-unccon.ads		20130417131022 f9eb8f06
-D b~server.ads		20140207154836 b911888e
-D b~server.adb		20140207154836 3b2df9e7
+D b~server.ads		20140210095232 df873035
+D b~server.adb		20140210095232 26a7e4fa
 D system.ads		20130417131036 f2f2d889
 D s-parame.ads		20130417131032 b6e20cc0
 D s-restri.ads		20130417131032 ba60cf37
@@ -272,40 +272,40 @@ X 4 b~server.ads
 426m4*u00195{37M9} 427r22
 428m4*u00196{37M9} 429r22
 X 5 b~server.adb
-11i4 E088{short_integer} 11m46 11r46 302m7 302r15
-12i4 E017{short_integer} 12m46 12r46 300m7 300r15
-13i4 E027{short_integer} 13m46 13r46 256m7 256r15
-14i4 E172{short_integer} 14m46 14r46 258m7 258r15
-15i4 E079{short_integer} 15m46 15r46 260m7 260r15
-16i4 E010{short_integer} 16m46 16r46 298m7 298r15
-17i4 E007{short_integer} 17m46 17r46 263m7 263r15
-18i4 E081{short_integer} 18m46 18r46 296m7 296r15
-19i4 E083{short_integer} 19m46 19r46 295m7 295r15
-20i4 E033{short_integer} 20m46 20r46 267m7 267r15
-21i4 E078{short_integer} 21m46 21r46 269m7 269r15
-22i4 E076{short_integer} 22m46 22r46 271m7 271r15
-23i4 E101{short_integer} 23m46 23r46 273m7 273r15
-24i4 E093{short_integer} 24m46 24r46 82m7 82r15 294m7 294r15
-25i4 E107{short_integer} 25m46 25r46 83m7 83r15 292m7 292r15
-26i4 E184{short_integer} 26m46 26r46 278m7 278r15
-27i4 E182{short_integer} 27m46 27r46 280m7 280r15
-28i4 E103{short_integer} 28m46 28r46 118m7 118r15 282m7 282r15
-29i4 E091{short_integer} 29m46 29r46 115m10 115r18 284m7 284r15
-30i4 E067{short_integer} 30m46 30r46 104m7 104r15 286m7 286r15
-31i4 E074{short_integer} 31m46 31r46 88m10 88r18 291m7 291r15
-32i4 E177{short_integer} 32m46 32r46 79m10 79r18 310m7 310r15
+11i4 E096{short_integer} 11m46 11r46 302m7 302r15
+12i4 E018{short_integer} 12m46 12r46 300m7 300r15
+13i4 E028{short_integer} 13m46 13r46 256m7 256r15
+14i4 E176{short_integer} 14m46 14r46 258m7 258r15
+15i4 E089{short_integer} 15m46 15r46 260m7 260r15
+16i4 E060{short_integer} 16m46 16r46 298m7 298r15
+17i4 E058{short_integer} 17m46 17r46 263m7 263r15
+18i4 E053{short_integer} 18m46 18r46 296m7 296r15
+19i4 E091{short_integer} 19m46 19r46 295m7 295r15
+20i4 E034{short_integer} 20m46 20r46 267m7 267r15
+21i4 E088{short_integer} 21m46 21r46 269m7 269r15
+22i4 E086{short_integer} 22m46 22r46 271m7 271r15
+23i4 E109{short_integer} 23m46 23r46 273m7 273r15
+24i4 E101{short_integer} 24m46 24r46 82m7 82r15 294m7 294r15
+25i4 E115{short_integer} 25m46 25r46 83m7 83r15 292m7 292r15
+26i4 E010{short_integer} 26m46 26r46 278m7 278r15
+27i4 E008{short_integer} 27m46 27r46 280m7 280r15
+28i4 E111{short_integer} 28m46 28r46 118m7 118r15 282m7 282r15
+29i4 E099{short_integer} 29m46 29r46 115m10 115r18 284m7 284r15
+30i4 E077{short_integer} 30m46 30r46 104m7 104r15 286m7 286r15
+31i4 E084{short_integer} 31m46 31r46 88m10 88r18 291m7 291r15
+32i4 E181{short_integer} 32m46 32r46 79m10 79r18 310m7 310r15
 33i4 E192{short_integer} 33m46 33r46 91m7 91r15 289m7 289r15
-34i4 E021{short_integer} 34m46 34r46 304m7 304r15
+34i4 E022{short_integer} 34m46 34r46 304m7 304r15
 35i4 E190{short_integer} 35m46 35r46 306m7 306r15
-36i4 E180{short_integer} 36m46 36r46 308m7 308r15
-37i4 E065{short_integer} 37m46 37r46 312m7 312r15
-38i4 E147{short_integer} 38m46 38r46 314m7 314r15
-39i4 E153{short_integer} 39m46 39r46 316m7 316r15
-40i4 E169{short_integer} 40m46 40r46 319m7 319r15
-41i4 E174{short_integer} 41m46 41r46 68m7 68r15 322m7 322r15
-42i4 E157{short_integer} 42m46 42r46 61m7 61r15 324m7 324r15
-43i4 E161{short_integer} 43m46 43r46 326m7 326r15
-44i4 E167{short_integer} 44m46 44r46 328m7 328r15
+36i4 E184{short_integer} 36m46 36r46 308m7 308r15
+37i4 E075{short_integer} 37m46 37r46 312m7 312r15
+38i4 E153{short_integer} 38m46 38r46 314m7 314r15
+39i4 E159{short_integer} 39m46 39r46 316m7 316r15
+40i4 E173{short_integer} 40m46 40r46 319m7 319r15
+41i4 E178{short_integer} 41m46 41r46 68m7 68r15 322m7 322r15
+42i4 E161{short_integer} 42m46 42r46 61m7 61r15 324m7 324r15
+43i4 E165{short_integer} 43m46 43r46 326m7 326r15
+44i4 E171{short_integer} 44m46 44r46 328m7 328r15
 45i4 E006{short_integer} 45m46 45r46 54m7 54r15 331m7 331r15
 47a4 Local_Priority_Specific_Dispatching{string} 238r9
 48a4 Local_Interrupt_States{string} 241r27

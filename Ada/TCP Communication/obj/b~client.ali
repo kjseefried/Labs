@@ -19,20 +19,20 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK
 
-U ada_main%b		b~client.adb		6f35a88b NE OO PK IL
+U ada_main%b		b~client.adb		41bd517a NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b~client.ads		add3c0ed EE NE OO PK IL
+U ada_main%s		b~client.ads		835b391c EE NE OO PK IL
 W system%s		system.ads		system.ali
 
 D ada.ads		20130417131023 3ffc8e18
 D a-except.ads		20130417131019 10fcae55
 D a-unccon.ads		20130417131022 f9eb8f06
-D b~client.ads		20140207161714 5f211864
-D b~client.adb		20140207161714 9a88d18d
+D b~client.ads		20140210110039 71a9e195
+D b~client.adb		20140210110039 9a88d18d
 D system.ads		20130417131036 f2f2d889
 D s-parame.ads		20130417131032 b6e20cc0
 D s-restri.ads		20130417131032 ba60cf37

@@ -421,7 +421,7 @@ package ada_main is
    pragma Export (C, u00192, "system__traces__taskingS");
    u00193 : constant Version_32 := 16#919f12a3#;
    pragma Export (C, u00193, "tcpS");
-   u00194 : constant Version_32 := 16#cdeb3ccc#;
+   u00194 : constant Version_32 := 16#2b6fcfb6#;
    pragma Export (C, u00194, "tcp__clientB");
    u00195 : constant Version_32 := 16#0c24b8dc#;
    pragma Export (C, u00195, "tcp__clientS");

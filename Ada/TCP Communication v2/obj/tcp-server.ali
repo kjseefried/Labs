@@ -8,11 +8,14 @@ A -gnatA
 P SS ZX
 
 RN
+RV NO_DELAY
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
 RV NO_FIXED_POINT
 RV NO_IO
+RV NO_RELATIVE_DELAY
 RV NO_SECONDARY_STACK
+RV NO_SELECT_STATEMENTS
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_STREAMS
 RV NO_TASK_HIERARCHY
@@ -22,10 +25,12 @@ RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK
+RV MAX_SELECT_ALTERNATIVES=2
 RV MAX_TASK_ENTRIES=3
 RV MAX_TASKS=1+
 
-U tcp.server%b		tcp-server.adb		cf2f765a OO PK IU
+U tcp.server%b		tcp-server.adb		ad3e2eb7 OO PK IU
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.streams%s		a-stream.ads		a-stream.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W system%s		system.ads		system.ali
@@ -71,6 +76,8 @@ W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 W tcp%s			tcp.ads			tcp.ali
 
 D ada.ads		20130417131023 3ffc8e18
+D a-calend.ads		20130417131018 d86d6c8c
+D a-caldel.ads		20130417131018 9f20b83d
 D a-contai.ads		20130417131019 61e5e089
 D a-cdlili.ads		20130417131018 c3008bbb
 D a-cdlili.adb		20130417131018 17cec70d
@@ -128,91 +135,91 @@ D s-traent.ads		20130417131033 5221ee41
 D s-unstyp.ads		20130417131034 6ae15c76
 D s-wchcon.ads		20130417131034 bfeb2e3d
 D tcp.ads		20140205184446 919f12a3
-D tcp-server.ads	20140207154543 ebafbbd9
-D tcp-server.adb	20140207154833 2480cd83
+D tcp-server.ads	20140207155317 ebafbbd9
+D tcp-server.adb	20140210095214 4691956e
 X 1 ada.ads
-16K9*Ada 19e8 59|1r6 2r6 3r6 5r6 7r5 9r5 60|14r3
-X 2 a-contai.ads
-16K13*Containers 24e19 59|5r10 9r9
-X 3 a-cdlili.ads
-45k24*Doubly_Linked_Lists 381e39 59|5w21 26r37
-49R9*List 59|28r32[26]
-X 7 a-ioexce.ads
-18K13*IO_Exceptions 30e22 59|2w10
-X 8 a-iteint.ads
+16K9*Ada 19e8 61|1r6 2r6 3r6 5r6 7r5 9r5 62|14r3 85r13
+X 4 a-contai.ads
+16K13*Containers 24e19 61|5r10 9r9
+X 5 a-cdlili.ads
+45k24*Doubly_Linked_Lists 381e39 61|5w21 25r37
+49R9*List 61|28r32[25]
+X 9 a-ioexce.ads
+18K13*IO_Exceptions 30e22 61|2w10
+X 10 a-iteint.ads
 24h9 Forward_Iterator
-32h9 Reversible_Iterator<24R9[3|67]>
-X 10 a-stream.ads
-36K13*Streams 69e16 59|3w10
-X 12 a-textio.ads
-49K13*Text_IO 471e16 59|1w10 7r9 60|14r7
-166U14*New_Line 60|14s15
-263U14*Put_Line 60|28s3 48s10 58s9 60s9
-X 15 gnat.ads
-34K9*GNAT 37e9 59|4r6 8r5 10r10
-X 16 g-socket.ads
-58K14*Sockets 1262e17 59|4w11 10r15 14r47 20r32 60|7r45 8r19 9r19 10r19 11r19
-. 15r3 17r3 18r20 21r3 22r19 23r19 26r3 31r8 41r23 44r20 48r21 57r11 68r16
-. 72r33
-412I9*Socket_Type 60|10r27 11r27
+32h9 Reversible_Iterator<24R9[5|67]>
+X 12 a-stream.ads
+36K13*Streams 69e16 61|3w10
+X 14 a-textio.ads
+49K13*Text_IO 471e16 61|1w10 7r9 62|14r7 85r17
+166U14*New_Line 62|14s15
+263U14*Put_Line 62|28s3 49s10 59s9 61s9 85s25
+X 17 gnat.ads
+34K9*GNAT 37e9 61|4r6 8r5 10r10
+X 18 g-socket.ads
+58K14*Sockets 1262e17 61|4w11 10r15 14r47 19r32 62|7r45 8r19 9r19 10r19 11r19
+. 15r3 17r3 18r20 21r3 22r19 23r19 26r3 31r8 41r23 43r20 49r21 58r11 69r16
+. 71r31
+412I9*Socket_Type 62|10r27 11r27
 439O12*Timeval_Duration{duration}
 441O12*Selector_Duration{439O12}
-444E9*Selector_Status 444e57 60|8r27
-451X4*Socket_Error 60|57r19
-463n25*Family_Inet{463E9} 60|22r27
-479I9*Port_Type<integer> 59|14r55 60|7r53
-505R9*Sock_Addr_Type 508e14 60|9r27
-505e25*Family{463E9} 60|22m9
-506r7*Addr{488R9} 60|23m9
-507i7*Port{479I9} 60|24m9
-521V13*Image{string} 60|48s29
-524V13*Inet_Addr{488R9} 60|23s27
-683n7*Reuse_Address{681E9} 60|18r28
-699e22*Name{681E9} 60|18m9
-708b13*Enabled{boolean} 60|19m9
-805U14*Create_Socket 60|15s11
-821U14*Accept_Socket 60|31s16
-822i7 Server{412I9} 60|32r10
-823i7 Socket{412I9} 60|33r10
-824r7 Address{505R9} 60|34r10
-825o7 Timeout{441O12} 60|35r10
-827e7 Status{444E9} 60|36r10
-835U14*Bind_Socket 60|21s11
-886U14*Listen_Socket 60|26s11
-993U14*Set_Socket_Option 60|17s11
-996r7 Option{699R9} 60|17r39
-1006P9*Stream_Access(10|39R9) 59|10r23 20r40 60|41r31 68r24 72r41
-1009V13*Stream{1006P9} 60|44s28
-X 38 s-stausa.ads
+444E9*Selector_Status 444e57 62|8r27
+451X4*Socket_Error 62|58r19
+463n25*Family_Inet{463E9} 62|22r27
+479I9*Port_Type<integer> 61|14r55 62|7r53
+505R9*Sock_Addr_Type 508e14 62|9r27
+505e25*Family{463E9} 62|22m9
+506r7*Addr{488R9} 62|23m9
+507i7*Port{479I9} 62|24m9
+521V13*Image{string} 62|49s29
+524V13*Inet_Addr{488R9} 62|23s27
+683n7*Reuse_Address{681E9} 62|18r28
+699e22*Name{681E9} 62|18m9
+708b13*Enabled{boolean} 62|19m9
+805U14*Create_Socket 62|15s11
+821U14*Accept_Socket 62|31s16
+822i7 Server{412I9} 62|32r10
+823i7 Socket{412I9} 62|33r10
+824r7 Address{505R9} 62|34r10
+825o7 Timeout{441O12} 62|35r10
+827e7 Status{444E9} 62|36r10
+835U14*Bind_Socket 62|21s11
+886U14*Listen_Socket 62|26s11
+993U14*Set_Socket_Option 62|17s11
+996r7 Option{699R9} 62|17r39
+1006P9*Stream_Access(12|39R9) 61|10r23 19r40 62|41r31 69r24 71r39
+1009V13*Stream{1006P9} 62|43s28
+X 40 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 58 tcp.ads
-1K9*TCP 3e8 59|12r9 30r5 60|1r14 92r5
-X 59 tcp-server.ads
-12K13*Server 58|1k9 59|30l9 30e15 60|1b18 92l9 92t15
-14U14*Start 14>21 14>37 60|7b12 62l6 62t11
-14s21 IP{string} 60|7b19 23r38 28r33
-14i37 Port{16|479I9} 60|7b35 24r19 28r44
-16T9*Client_Type 17r37 60|40r23
-17P9*Client_Access(16T9) 26r58
-19T14*Client_Type 23l8 23e19 60|67b12 87l8 87t19
-20Y13 Set_Stream 20>25 60|45s21 72b14 74l11 74t21
-20p25 S{16|1006P9} 60|73r19
-21Y13 Read 21<19 60|82b14 84l11 84t15
-21s19 Message{string} 60|83m10 83r10
-22Y13 Write 22>20 60|77b14 79l11 79t16
-22s20 Message{string} 60|78r34
-26K12*Channel_List_Type[3|45] 27r8 28r14
-28r4*Clients{3|49R9[26]}
-X 60 tcp-server.adb
-8e5 Status{16|444E9} 36m21 36r21
-9r5 Client{16|505R9} 34m21 48r36
-10i5 Connection{16|412I9} 33m21 44r36
-11i5 Receiver{16|412I9} 15m25 17r29 21r24 26r26 32r21
-40t10 New_Client{59|19T14} 45r10
-41p10 Stream{16|1006P9} 44m10 45r33 49r26
-68p7 Stream{16|1006P9} 73m9 78r26 83r36
-72p26 S{16|1006P9}
-77s21 Message{string}
-82s20 Message{string}
+X 60 tcp.ads
+1K9*TCP 3e8 61|12r9 30r5 62|1r14 96r5
+X 61 tcp-server.ads
+12K13*Server 60|1k9 61|30l9 30e15 62|1b18 96l9 96t15
+14U14*Start 14>21 14>37 62|7b12 63l6 63t11
+14s21 IP{string} 62|7b19 23r38 28r33
+14i37 Port{18|479I9} 62|7b35 24r19 28r44
+16T9*Client_Type 17r37 62|40r23
+17P9*Client_Access(16T9) 25r58
+18T14*Client_Type 22l8 22e19 62|68b12 91l8 91t19
+19Y13 Set_Stream 19>25 62|44s21 71b12 73l11 73t21
+19p25 S{18|1006P9} 62|72r19
+20Y13 Read 20<19 62|84b17 87l14 87t18
+20s19 Message{string} 62|86m13 86r13
+21Y13 Write 21>20 62|50s21 78b17 80l14 80t19
+21s20 Message{string} 62|79r37
+25K12*Channel_List_Type[5|45] 26r8 28r14
+28r4*Clients{5|49R9[25]}
+X 62 tcp-server.adb
+8e5 Status{18|444E9} 36m21 36r21
+9r5 Client{18|505R9} 34m21 49r36
+10i5 Connection{18|412I9} 33m21 43r36
+11i5 Receiver{18|412I9} 15m25 17r29 21r24 26r26 32r21
+40t10 New_Client{61|18T14} 44r10 50r10
+41p10 Stream{18|1006P9} 43m10 44r33
+69p7 Stream{18|1006P9} 72m9 79r29 86r39
+71p24 S{18|1006P9}
+78s24 Message{string}
+84s23 Message{string}
 

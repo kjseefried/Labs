@@ -21,6 +21,8 @@ package TCP.Server is
    task type Writer_Task;
    task type Reader_Task;
 
+   procedure Broadcast( Message : in String; Author : in String := "Server> " );
+
 private
 
    Receiver: Sockets.Socket_Type;

@@ -8,203 +8,170 @@ with Ada.Unchecked_Deallocation;
 package body LinkedListHandler is
 
 
-   procedure AddLast(List1 : in out List; Value : in Integer) is
+
+
+   procedure AddLast (List0 : in out List; Value : in ElementType) is
    begin
-      if List1.Head = null then
-         List1.Head   := new Node'(Value, null);
-         List1.Tail   := List1.Head;
-         List1.Length := 1;
+      if List0.Head = null then
+         List0.Head   := new Node'(Value, null);
+         List0.Tail   := List0.Head;
+         List0.Length := 1;
       else
-         --Add a new node after the tail.
-         List1.Tail.Next := new Node'(Value, null);
-         --And assign that node to the tail.
-         List1.Tail      := List1.Tail.Next;
-         List1.Length    := List1.Length + 1;
+         List0.Tail.Next := new Node'(Value, null);
+         List0.Tail      := List0.Tail.Next;
+         List0.Length    := List0.Length + 1;
       end if;
    end AddLast;
 
 
-   procedure PreAddFirst (List1 : in out List; Value : in Integer) is
-      link_temp : Link;
+
+
+
+
+
+
+
+   procedure Walk (List0 : List; Callback : access function (Integer0 : in ElementType) return boolean) is
+      Temp : NodePtr := List0.Head;
    begin
-      link_temp := new Node'(Value, null);
-      link_temp.next := List1.Head;
-      List1.Head := link_temp;
-   end PreAddFirst;
-
-
-
-
-
-
-   procedure Get (List1 : in out List) is
-      Value : Integer;
-   begin
-      Ada.Integer_Text_IO.Get (Value);
-      AddLast (List1, Value);
-   end Get;
-
-   ------------------------
-   -- Walking Procedures --
-   ------------------------
-   procedure Walk
-     (Link1    : not null Link;
-      callback : access procedure (Value : in out Integer))
-   is
-   begin
-      callback (Link1.Value);
-      if Link1.Next /= null then
-         Walk (Link1.Next, callback);
-      end if;
+      while Temp /= null loop
+	 if Callback(Temp.Value) then
+	    Temp := Temp.Next;
+	 end if;
+      end loop;
    end Walk;
 
-   procedure Walk
-     (List1    : List;
-      callback : access procedure (Value : in out Integer))
-   is
-   begin
-      if List1.Head /= null then
-         Walk (List1.Head, callback);
-      end if;
-   end Walk;
 
-   procedure WalkAdv
-     (Link1    : not null Link;
-      callback : access procedure (Link1 : Link))
-   is
-   begin
-      callback (Link1);
-      if Link1.Next /= null then
-         WalkAdv (Link1.Next, callback);
-      end if;
-   end WalkAdv;
 
-   procedure WalkAdv
-     (List1    : List;
-      callback : access procedure (Link1 : Link))
-   is
-   begin
-      if List1.Head /= null then
-         WalkAdv (List1.Head, callback);
-      end if;
-   end WalkAdv;
 
-   procedure Reduce
-     (List1    : in out List;
-      callback : access function (left, right : in Integer) return Integer)
-   is
-      sum : Integer;
-      procedure Reducer (Value : in out Integer) is
-      begin
-         sum := callback (sum, Value);
-      end Reducer;
-   begin
-      if List1.Head /= null then
-         --The first value is already in the sum variable
-         if List1.Head.Next /= null then
-            sum := List1.Head.Value;
-            Walk (List1.Head.Next, Reducer'Access);
-            RemoveAll (List1);
-            AddLast (List1, sum);
-         end if;
-      end if;
-   end Reduce;
 
-   -----------------
-   -- Remove Section --
-   -----------------
-   procedure RemoveAll (List1 : in out List) is
+   procedure Map (List0 : List; Callback : access function (Integer0 : in ElementType) return ElementType) is
+      Temp : NodePtr := List0.Head;
    begin
-      List1.Head   := null;
-      List1.Tail   := null;
-      List1.Length := 0;
+      while Temp /= null loop
+	 Temp.Value := Callback(Temp.Value);
+	 Temp := Temp.Next;
+      end loop;
+   end Map;
+
+
+
+
+
+
+   function IsEmpty (List0 : in List) return Boolean is
+   begin
+      return List0.Head = null;
+   end IsEmpty;
+
+
+   function IsThere (List0 : List; Needle : ElementType) return Boolean is
+      Temp : NodePtr := List0.Head;
+   begin
+      while Temp /= null loop
+	 if Temp.Value = Needle then
+	    return True;
+	 else
+	    Temp := Temp.Next;
+	 end if;
+      end loop;
+      return False;
+   end IsThere;
+
+
+
+
+
+   procedure RemoveAll(List0 : in out List) is
+      Temp : NodePtr;
+   begin
+
+      List0.Length := 0;
+
+      if IsEmpty(List0) then
+         return;
+      end if;
+
+      while List0.Head /= null loop
+         Temp := List0.Head;
+         List0.Head := List0.Head.Next;
+         Free(Temp);
+      end loop;
+
+      List0.Tail := null;
+      Free(List0.Tail);
    end RemoveAll;
 
-   procedure RemoveFirst (List1 : in out List) is
-      TheOldHead :Link := List1.Head;
-   begin
-      if List1.Head /= null then
-         if List1.Head.Next = null then
-            RemoveAll (List1);
-         else
-            List1.Length := List1.Length - 1;
-            List1.Head   := List1.Head.Next;
-            Free(TheOldHead);
-         end if;
-      end if;
-   end RemoveFirst;
 
-   procedure RemoveLast (List1 : in out List) is
-      procedure Remover (Link1 : Link) is
-      begin
-	 if Link1.Next.Next = null then
-	    Free(Link1.Next); --Remove the last.
-	    Link1.Next := null; --Unlink the last
-            List1.Tail := Link1; --Update the Tail.
-         end if;
-      end Remover;
-   begin
-      if List1.Head /= null then
-         if List1.Head.Next = null then
-            RemoveAll(List1);
-         else
-            WalkAdv(List1, Remover'Access);
-         end if;
-      end if;
-   end RemoveLast;
 
-   procedure Remove (List1 : in out List; Index : in Integer) is
-      Counter : Integer := 1;
-      procedure Remover (Link1 : Link) is
-      begin
-         Counter := Counter + 1;
-         if Counter = Index then
-            --Bypass the node beetween these 2.
-            Link1.Next   := Link1.Next.Next;
-            List1.Length := List1.Length - 1;
-         end if;
-      end Remover;
+
+
+
+
+   procedure Remove(List0 : in out List; Value : in ElementType) is
+      Current : NodePtr := List0.Head;
+      Temp : NodePtr;
    begin
-      if Index = 1 then
-         RemoveFirst (List1);
-      elsif Index = List1.Length then
-         RemoveLast (List1);
-      elsif Index < List1.Length then
-         --The procedure Remover taking a advanced walk troughout the list.
-         WalkAdv (List1, Remover'Access);
+
+      if IsEmpty(List0) then
+         return;
       end if;
+
+      if List0.Head.Value = List0.Tail.Value then
+         RemoveAll(List0);
+         return;
+      end if;
+
+      if List0.Head.Value = Value then
+	 List0.Length := List0.Length - 1;
+         List0.Head := List0.Head.Next;
+         Free(Current);
+         return;
+      end if;
+
+
+      while Current.Next /= null loop
+	 if Current.Next.Value = Value and List0.Tail.Value = Value then
+	    List0.Length := List0.Length - 1;
+            Current.Next := null;
+            List0.Tail := Current;
+            Free(Current.Next);
+	 elsif Current.Next.Value = Value then
+	    List0.Length := List0.Length - 1;
+            Temp := Current.Next;
+            Current.Next := Current.Next.Next;
+            Free(Temp);
+         else
+            Current := Current.Next;
+         end if;
+      end loop;
    end Remove;
 
 
 
 
-   function Exist (List0 : List; ValueToFind : Integer) return Boolean is
-      function q(Link0 : Link) return Boolean is
-      begin
-         if Link0.Value = ValueToFind then
-            return true;
-         else
-            if Link0.Next /= null then
-               return q(Link0.Next);
-            else
-               return false;
-            end if;
-         end if;
-      end q;
+   procedure RemoveFirst(List0 : in out List) is
    begin
-      return q(List0.Head);
-   end Exist;
+      if IsEmpty(List0) then
+         return;
+      end if;
+      Remove(List0,List0.Head.Value);
+   end;
 
-   ---------------------
-   -- Useless Section --
-   ---------------------
-   procedure PrintMemory (List1 : List) is
-      procedure MemoryPrinter (Link1 : Link) is
-      begin
-	 Ada.Text_IO.Put_Line(System.Address_Image (Link1.all'Address) & " => " & Link1.Value'Img);
-      end MemoryPrinter;
+
+
+
+   procedure RemoveLast(List0 : in out List) is
    begin
-      WalkAdv(List1, MemoryPrinter'Access);
-   end PrintMemory;
+      if IsEmpty(List0) then
+	 return;
+      end if;
+      Remove(List0,List0.Tail.Value);
+   end;
+
+
+
+
+
 
 end LinkedListHandler;

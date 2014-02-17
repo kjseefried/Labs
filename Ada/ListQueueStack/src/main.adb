@@ -1,98 +1,67 @@
-with Ada.Text_IO, Ada.Integer_Text_IO;
-
+with Ada.Text_IO;
 with LinkedListHandler;
-with ToolBox;
-with System.Address_Image;
+with Ada.Numerics;
+with Ada.Numerics.Discrete_Random;
 
 procedure Main is
-   List1 : LinkedListHandler.List;
 
-   package QueueHandler is
-      List : LinkedListHandler.List;
-      RemoveLast : access procedure (List1: in out LinkedListHandler.List) := LinkedListHandler.RemoveLast'access;
-      RemoveFirst : access procedure (List1: in out LinkedListHandler.List) := LinkedListHandler.RemoveFirst'access;
+
+
+
+   package IntList is new LinkedListHandler(Integer);
+   List0 : IntList.List;
+
+   function Printer(Integer0 : in Integer) return boolean is
+   begin
+      if Integer0 < 10 then
+	 Ada.Text_IO.Put_Line("i = "&Integer0'img);
+      end if;
+      return True;
    end;
 
 
-   procedure square (Value : in out Integer) is
+   type ArrayOfInteger is array (1..10**6) of Integer;
+   procedure ShuffleArrayOfInteger (List : in out ArrayOfInteger) is
+      package Discrete_Random is new Ada.Numerics.Discrete_Random(Result_Subtype => Integer);
+      K : Integer;
+      G : Discrete_Random.Generator;
+      T : Integer;
    begin
-      Value := Value ** 2;
-   end square;
-
-
-   procedure Menu is
-      Input : Character := ' ';
-   begin
-      loop
-         Ada.Text_IO.Put_Line("+-----------------+-----------------+------------------+");
-         Ada.Text_IO.Put_Line("| Quit        ESC | RemoveLast    L | Print         CR |");
-         Ada.Text_IO.Put_Line("| AddLast       I | RemoveFirst   F | PrintMemory    M |");
-         Ada.Text_IO.Put_Line("| AddLast A..B  X | RemoveAt      R | Reduce         + |");
-         Ada.Text_IO.Put_Line("| AddLast  Key  ? | RemoveAll     D | Reduce         * |");
-         Ada.Text_IO.Put_Line("| AddFirst      O | ReplaceAll    A | Square         S |");
-         Ada.Text_IO.Put_Line("+-----------------+-----------------+------------------+");
-	 Ada.Text_IO.Get_Immediate (Input);
-	 Ada.Text_IO.New_Line (100);
-         case Input is
-         when ASCII.ESC =>
-            Ada.Text_IO.Put_Line ("[Quitting]");
-            delay 0.4;
-            exit;
-         when 'I' | 'i' =>
-            Ada.Text_IO.Put ("AddLast ");
-            LinkedListHandler.Get (List1);
-         when 'O' | 'o' =>
-            Ada.Text_IO.Put ("AddFirst ");
-	    LinkedListHandler.AddFirst(List1,Toolbox.Get);
-	 when '0'|'1' | '2'| '3'| '4'| '5'| '6'| '7'| '8'| '9' =>
-	    LinkedListHandler.AddLast(List1, ToolBox.ToInteger(Input));
-	    Ada.Text_IO.Put_Line("Inserted "&Input);
-         when ASCII.CR =>
-            Ada.Text_IO.Put_Line ("[Print]");
-            Ada.Text_IO.New_Line (1);
-	    LinkedListHandler.Walk (List1, ToolBox.Print'Access);
-         when 'S' | 's' =>
-            Ada.Text_IO.Put_Line ("[Squared]");
-            LinkedListHandler.Walk (List1, square'Access);
-         when 'A' | 'a' =>
-            Ada.Text_IO.Put_Line ("[ReplaceAll]");
-            LinkedListHandler.Walk (List1, ToolBox.Get'Access);
-         when 'L' | 'l' =>
-            Ada.Text_IO.Put_Line ("[RemoveLast]");
-            LinkedListHandler.RemoveLast (List1);
-         when 'F' | 'f' =>
-            Ada.Text_IO.Put_Line ("[RemoveFirst]");
-            LinkedListHandler.RemoveFirst (List1);
-         when 'R' | 'r' =>
-            Ada.Text_IO.Put ("Remove ");
-            LinkedListHandler.Remove (List1, ToolBox.Get);
-         when 'M' | 'm' =>
-            Ada.Text_IO.Put_Line ("[PrintMemory]");
-            Ada.Text_IO.New_Line (1);
-	    LinkedListHandler.PrintMemory (List1);
-         when 'D' | 'd' =>
-            Ada.Text_IO.Put_Line ("[RemoveAll]");
-	    LinkedListHandler.RemoveAll (List1);
-         when '+' =>
-            Ada.Text_IO.Put_Line ("[Reduce +]");
-	    LinkedListHandler.Reduce(List1,ToolBox.Addition'Access);
-         when '*' =>
-            Ada.Text_IO.Put_Line ("[Reduce *]");
-            LinkedListHandler.Reduce(List1,ToolBox.Multiplication'Access);
-         when 'X' | 'x' =>
-            Ada.Text_IO.Put_Line ("Insert A..B");
-            for i in ToolBox.Get .. ToolBox.Get loop
-               LinkedListHandler.AddLast (List1, i);
-            end loop;
-         when others =>
-            null;
-	 end case;
-	 Ada.Text_IO.New_Line (1);
+      Discrete_Random.Reset(G);
+      for I in reverse List'Range loop
+         K := (Discrete_Random.Random(G) mod I) + 1;
+         T := List(I);
+         List(I) := List(K);
+         List(K) := T;
       end loop;
-   end Menu;
+   end ShuffleArrayOfInteger;
+
+
+   ArrayOfInteger0 : ArrayOfInteger;
+
 
 begin
 
-   Menu;
+
+
+   Ada.Text_IO.Put_Line("[Create a..b]");
+   for i in ArrayOfInteger0'range loop
+      ArrayOfInteger0(i) := i;
+   end loop;
+   Ada.Text_IO.Put_Line("[Shuffle a..b]");
+   ShuffleArrayOfInteger(ArrayOfInteger0);
+   Ada.Text_IO.Put_Line("[Add a..b]");
+   for i in ArrayOfInteger0'range loop
+      IntList.AddLast(List0,ArrayOfInteger0(i));
+   end loop;
+   Ada.Text_IO.Put_Line("[Shuffle a..b]");
+   ShuffleArrayOfInteger(ArrayOfInteger0);
+   Ada.Text_IO.Put_Line("[Exist a..b]");
+   for i in ArrayOfInteger0'range loop
+      if i mod 1000 = 0 then
+         Ada.Text_IO.Put_Line( IntList.IsThere(List0,ArrayOfInteger0(i))'img );
+      end if;
+   end loop;
+
 
 end Main;
